@@ -1,65 +1,78 @@
 .footer {
   padding-bottom: 5px;
-  .social-bar{
+
+  .social-bar {
     text-align: center;
     margin-bottom: 28px;
   }
-  .social__link{
+
+  .social__link {
     display: inline-block;
     width: 22px;
     height: 22px;
     margin-right: 74px;
     opacity: 1;
     transition: .35s;
-    &:last-child{
+
+    &:last-child {
       margin-right: 0;
     }
+
     &:hover,
-    &:focus{
+    &:focus {
       opacity: .4;
     }
   }
+
   .icon {
     vertical-align: middle;
   }
-  .infinite-line{
+
+  .infinite-line {
     background: url(../assets/img/infinity-text.png) repeat-x;
     width: 100%;
     height: 12px;
     animation: animate 5s linear infinite;
-    &:nth-child(2){
+
+    &:nth-child(2) {
+      opacity: .6;
       animation: animate1 5s linear infinite;
     }
-    &:nth-child(3){
+
+    &:nth-child(3) {
       animation: animate2 5s linear infinite;
+    }
+
+    &:nth-child(4) {
+      opacity: .6;
     }
   }
 
   @keyframes animate {
-    from {
+    0% {
       background-position: 0 0;
     }
 
-    to {
+    100% {
       background-position: 400px 0;
     }
   }
   @keyframes animate1 {
-    from {
-      background-position: 0 0;
+    0% {
+      background-position: 25px 0;
     }
 
-    to {
+    100% {
       background-position: 450px 0;
     }
   }
   @keyframes animate2 {
-      from {
-        background-position: 0 0;
-      }
-
-      to {
-        background-position: 200px 0;
-      }
+    0% {
+      background-position: 35px 0;
     }
+
+    100% {
+      background-position: 250px 0;
+    }
+  }
 }

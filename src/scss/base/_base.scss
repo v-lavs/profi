@@ -76,3 +76,21 @@ body {
     color: $dark-grey;
   }
 }
+
+.btn_written{
+  position: fixed;
+  right: 58px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px;
+  width: 86px;
+  height: 86px;
+  background-color: $light-grey;
+  border-radius: 50%;
+  overflow: hidden;
+  border: none;
+  z-index: 300;
+  img{
+    vertical-align: middle;
+  }
+}

@@ -31,6 +31,23 @@ $(document).ready(function () {
 
     });
 
+
+    //BLOCK-WRITTEN
+    const blockWritten = $('.block-written');
+    $('.btn_written').on('click', function (e) {
+        e.preventDefault();
+        blockWritten.addClass('open');
+        jQuery('.backdrop').fadeIn();
+        $('body').addClass('modal-open')
+    });
+
+    $('.btn-close, .backdrop').click(function (e) {
+        e.preventDefault();
+        blockWritten.removeClass('open');
+        jQuery('.backdrop').fadeOut();
+        $('body').removeClass('modal-open')
+    });
+
     // HEADER SCROLL
     let scrollPrev = 0;
 

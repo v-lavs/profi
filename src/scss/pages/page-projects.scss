@@ -1,0 +1,30 @@
+.page-projects {
+  padding-top: 100px;
+
+  .section-gallery {
+    padding-bottom: 28px;
+    background-color: $white;
+    .card-gallery__list {
+      margin: 0 -23px;
+    }
+
+    .card-gallery {
+      padding: 0 23px;
+      width: 33%;
+      margin-bottom: 11.5%;
+
+      &__wrap-thumb {
+        padding-top: 79%;
+        margin-bottom: 14px;
+      }
+
+      &__title {
+        margin-bottom: 0;
+      }
+
+      &__body {
+        padding: 0 7px;
+      }
+    }
+  }
+}

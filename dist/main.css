@@ -342,6 +342,25 @@ body.modal-open {
   color: #8b8b8b;
 }
 
+.btn_written {
+  position: fixed;
+  right: 58px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px;
+  width: 86px;
+  height: 86px;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  overflow: hidden;
+  border: none;
+  z-index: 300;
+}
+
+.btn_written img {
+  vertical-align: middle;
+}
+
 .btn {
   display: inline-block;
   cursor: pointer;
@@ -413,7 +432,7 @@ body.modal-open {
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 24px 24px;
+  background-size: 30px;
 }
 
 .menu {
@@ -693,9 +712,109 @@ body.modal-open {
   transform: translate(-50%, -50%) rotate(180deg);
 }
 
+.block-written {
+  position: fixed;
+  max-width: 530px;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background-color: #ffffff;
+  padding: 50px 63px 58px 58px;
+  z-index: 700;
+  overflow-y: scroll;
+  transform: translateX(100%);
+  transition: transform .5s;
+}
+
+.block-written.open {
+  transform: translateX(0);
+}
+
+.block-written__title {
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.block-written__body {
+  padding-top: 95px;
+}
+
+.block-written__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.block-written .bold {
+  font-size: 35px;
+}
+
+.block-written .logo {
+  display: inline-block;
+  max-width: 52px;
+  margin-bottom: 40px;
+}
+
+.block-written .btn-close {
+  right: 45px;
+  top: 36px;
+}
+
+.block-written .form {
+  font-size: 17px;
+  font-weight: 300;
+  padding-bottom: 32px;
+}
+
+.block-written .form .wrap-link,
+.block-written .form__footer,
+.block-written .form .field-box,
+.block-written .form .textarea {
+  width: 100%;
+  max-width: initial;
+}
+
+.block-written .form .textarea {
+  padding-top: 10px;
+  max-height: 94px;
+  margin-bottom: 20px;
+}
+
+.block-written .form .input {
+  margin-bottom: 20px;
+}
+
+.block-written .form__footer {
+  padding-top: 13px;
+  flex-wrap: wrap;
+}
+
+.block-written .form .wrap-link {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 98px;
+}
+
+.block-written .form .link-presentation {
+  width: 53%;
+}
+
+.block-written .form .custom-select {
+  width: 38%;
+}
+
+.block-written .form .link-presentation:before,
+.block-written .form .nice-select:before {
+  opacity: .4;
+}
+
+.block-written .phone-link {
+  font-size: 22px;
+}
+
 .section-banner {
   padding-top: 100px;
   color: #ffffff;
+  position: relative;
 }
 
 .section-banner .banner__slide {
@@ -729,6 +848,16 @@ body.modal-open {
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 48px;
+}
+
+.section-banner .wrap-icon {
+  width: 22px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
 .section-gallery {
@@ -786,7 +915,7 @@ body.modal-open {
   left: 50%;
   top: 50%;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   transform: translate(-50%, -50%) scale(1);
   transition: .45s;
@@ -1173,7 +1302,7 @@ body.modal-open {
   right: 0;
   bottom: 0;
   background: #000000;
-  opacity: 0.5;
+  opacity: 0.25;
   z-index: 500;
 }
 
@@ -1216,6 +1345,7 @@ body.modal-open {
 }
 
 .footer .infinite-line:nth-child(2) {
+  opacity: .6;
   animation: animate1 5s linear infinite;
 }
 
@@ -1223,34 +1353,70 @@ body.modal-open {
   animation: animate2 5s linear infinite;
 }
 
+.footer .infinite-line:nth-child(4) {
+  opacity: .6;
+}
+
 @keyframes animate {
-  from {
+  0% {
     background-position: 0 0;
   }
 
-  to {
+  100% {
     background-position: 400px 0;
   }
 }
 
 @keyframes animate1 {
-  from {
-    background-position: 0 0;
+  0% {
+    background-position: 25px 0;
   }
 
-  to {
+  100% {
     background-position: 450px 0;
   }
 }
 
 @keyframes animate2 {
-  from {
-    background-position: 0 0;
+  0% {
+    background-position: 35px 0;
   }
 
-  to {
-    background-position: 200px 0;
+  100% {
+    background-position: 250px 0;
   }
+}
+
+.page-projects {
+  padding-top: 100px;
+}
+
+.page-projects .section-gallery {
+  padding-bottom: 28px;
+  background-color: #ffffff;
+}
+
+.page-projects .section-gallery .card-gallery__list {
+  margin: 0 -23px;
+}
+
+.page-projects .section-gallery .card-gallery {
+  padding: 0 23px;
+  width: 33%;
+  margin-bottom: 11.5%;
+}
+
+.page-projects .section-gallery .card-gallery__wrap-thumb {
+  padding-top: 79%;
+  margin-bottom: 14px;
+}
+
+.page-projects .section-gallery .card-gallery__title {
+  margin-bottom: 0;
+}
+
+.page-projects .section-gallery .card-gallery__body {
+  padding: 0 7px;
 }
 
 @media only screen and (max-width: 960px) {

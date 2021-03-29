@@ -1,7 +1,7 @@
 .section-banner {
   padding-top: 100px;
   color: $white;
-
+  position: relative;
   .banner__slide{
     min-height: 740px;
     background-position: center;
@@ -29,6 +29,15 @@
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 48px;
+  }
+  .wrap-icon{
+    width: 22px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    z-index: 1;
   }
 }
 
