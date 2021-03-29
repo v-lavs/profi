@@ -1,34 +1,64 @@
 .form {
-  font-size: 16px;
-  text-align: center;
+  font-size: 20px;
   color: $dark;
+  width: 100%;
+
   .input {
     display: block;
     width: 100%;
     background: #ffffff;
-    border: 1px solid #dce2e8;
-    border-radius: 8px;
+    border: none;
+    border-bottom: 2px solid #525250;
     line-height: 1;
-    padding: 17px 17px 18px;
-    text-align: center;
-    font-weight: 400;
-
+    padding: 20px 10px 10px 0;
+    margin-bottom: 30px;
   }
 
   ::placeholder {
-
+    color: $dark-grey;
   }
 
-  &__group {
-
+  .textarea {
+    width: 55%;
+    border: none;
+    border-bottom: 2px solid #525250;
+    padding: 20px 10px 10px 0;
+    max-height: 143px;
+    margin-bottom: 48px;
   }
-  .btn_submit {
 
+  .field-box {
+    max-width: 354px;
+    width: 25%;
+  }
 
-    &:hover,
-    &:focus{
+  &__footer {
+    display: flex;
+    width: 55%;
+    justify-content: space-between;
 
+    .link-presentation {
+      position: relative;
+      font-size: 14px;
+      color: $dark-grey;
+      width: 26.5%;
+      display: block;
+      padding-bottom: 2px;
+      padding-top: 18px;
+      border-bottom: 2px solid #c9d4dd;
+
+      &:before {
+        position: absolute;
+        content: '';
+        background-image: url(../assets/img/up-pdf.png);
+        width: 19px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        right: 0;
+        bottom: 5px;
+      }
     }
-
   }
 }

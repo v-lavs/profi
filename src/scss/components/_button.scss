@@ -20,13 +20,15 @@
   }
 
   &_dark {
+    background-color: $dark;
+    color: $white;
 
+    &:hover,
+    &:focus {
+      background-color: $dark-grey;
+    }
   }
 
-  &:hover,
-  &:focus {
-
-  }
 }
 
 .btn_play{

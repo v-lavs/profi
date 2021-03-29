@@ -1,6 +1,14 @@
 .section-contacts {
+  padding-bottom: 120px;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
   .section__slogan {
     font-size: 35px;
+    width: 56%;
+    margin-bottom: 86px;
   }
 
   .bold {
@@ -8,12 +16,6 @@
     line-height: .8;
     margin-bottom: 35px;
     display: inline-block;
-  }
-
-  .section__content {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 100px;
   }
 
   .address {
@@ -33,6 +35,11 @@
       color: $dark;
       line-height: .65;
       margin-bottom: 10px;
+    }
+  }
+  .form{
+    .field-box{
+      float: right;
     }
   }
 }

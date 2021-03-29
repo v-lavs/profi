@@ -14,29 +14,28 @@ $(document).ready(function () {
     }
 
     //MOBILE MENU
-    const nav = $('.header__nav')
+    const nav = $('.header__nav');
 
     $('.btn-burger').on('click', function (e) {
-        e.preventDefault()
-        nav.addClass('open')
-        jQuery('.backdrop').fadeIn()
+        e.preventDefault();
+        nav.addClass('open');
+        jQuery('.backdrop').fadeIn();
         $('body').addClass('modal-open')
-
-    })
+    });
 
     $('.btn-close, .backdrop, .menu__link').click(function (e) {
-        e.preventDefault()
-        nav.removeClass('open')
-        jQuery('.backdrop').fadeOut()
+        e.preventDefault();
+        nav.removeClass('open');
+        jQuery('.backdrop').fadeOut();
         $('body').removeClass('modal-open')
 
-    })
+    });
 
     // HEADER SCROLL
-    let scrollPrev = 0
+    let scrollPrev = 0;
 
     $(window).scroll(function () {
-        let scrolled = $(window).scrollTop()
+        let scrolled = $(window).scrollTop();
 
         if (scrolled > 100 && scrolled > scrollPrev) {
             $('.header').addClass('header_active')
@@ -44,7 +43,7 @@ $(document).ready(function () {
             $('.header').removeClass('header_active')
         }
         scrollPrev = scrolled
-    })
+    });
 
 
     // POPUPS PHONE

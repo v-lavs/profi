@@ -1,23 +1,28 @@
 .nice-select {
+  border: none;
+  border-bottom: 2px solid  #c9d4dd;
+  border-radius: 0;
+  padding: 7px 10px 7px 0;
+  color: $dark-grey;
+  height: 39px;
+  width: 26.5%;
 
-  .option.selected.focus{
-
-  }
-  .option:hover,
-  .nice-select .option.focus,
-  .nice-select
-  .option.selected.focus{
-
-  }
   &:after {
-
+    display: none;
   }
-
+  &:before{
+    position: absolute;
+    content: '';
+    background-image: url(../assets/img/upload.png);
+    width: 17px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    right: 0;
+    bottom: 5px;
+  }
   .list {
-
-  }
-
-  span.current {
-
+    width: 100%;
   }
 }
