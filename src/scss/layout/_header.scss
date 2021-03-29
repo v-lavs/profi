@@ -1,0 +1,139 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 550;
+  background-color: $white;
+  line-height: 1.28;
+  color: $dark;
+  padding: 28px 0 35px;
+  transition: .35s linear;
+
+  &.header_active {
+    transform: translateY(-100%);
+  }
+
+  .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 138px;
+    height: auto;
+    display: block;
+    margin-right: auto;
+  }
+
+  .lang-switch{
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-left: 12.5%;
+   &__link{
+     display: inline-block;
+     padding: 0 10px;
+     color: $dark;
+     opacity: .4;
+     &_active{
+       color: $dark;
+       opacity: 1;
+     }
+   }
+  }
+
+  .btn-burger {
+    border: none;
+    background-color: transparent;
+    display: none;
+    width: 32px;
+    height: 32px;
+    padding: 3px;
+
+    .line {
+      display: block;
+      width: 24px;
+      height: 2px;
+      margin-bottom: 3px;
+      background-color: $dark;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .btn-close {
+    display: none;
+    right: 20px;
+    top: 25px;
+  }
+
+
+  @include respond-to($lg) {
+    .container{
+      justify-content: space-between;
+    }
+    &__logo {
+      max-width: 35px;
+      margin-left: auto;
+    }
+    .lang-switch{
+      margin-left: 0;
+    }
+    .btn-close,
+    .btn-burger {
+      display: block;
+    }
+
+    .header__nav {
+      padding: 80px 20px;
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: $white;
+      overflow: auto;
+      transition: transform .5s;
+      transform: translateX(100%);
+      z-index: 999;
+      max-width: 380px;
+      width: 100%;
+      height: 100vh;
+
+      &.open {
+        transform: translateX(0);
+      }
+
+      .menu {
+        flex-direction: column;
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 37px;
+
+        &__item {
+          margin-bottom: 15px;
+          margin-left: 0;
+          width: 100%;
+          border-radius: 10px;
+          flex: 0;
+          line-height: .9;
+        }
+      }
+    }
+  }
+}
+
+
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $dark;
+  opacity: 0.5;
+  z-index: 500;
+}

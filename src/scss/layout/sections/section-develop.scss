@@ -1,0 +1,119 @@
+.section-develop{
+  position: relative;
+  background-color: $white;
+  padding-top: 240px;
+  padding-bottom: 240px;
+  &:before{
+    position: absolute;
+    content: '';
+    display: block;
+    height: 50px;
+    width: 150vw;
+    background-color: $yellow;
+    top: 18%;
+    left: -10%;
+    transform: rotate(32deg);
+    transform-origin: 0 100%;
+  }
+  .section__title{
+    margin-bottom: 48px;
+  }
+  .develop{
+    &__list{
+      display: flex;
+      margin: 0 -45px 110px;
+    }
+    &__card{
+      position: relative;
+      width: 25%;
+      min-height: 400px;
+      margin: 0 10px;
+      background-color: $white;
+      padding: 44px 35px 64px;
+      font-size: 17px;
+
+      &:before{
+        position: absolute;
+        content: '';
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        transform: scaleY(0);
+        background-color: $yellow;
+        z-index: 0;
+        transition: transform .35s;
+        transform-origin: 0% 100%;
+      }
+      &:hover:before{
+        transform: scaleY(1);
+      }
+      &:hover,
+      &:focus{
+        font-size: 19px;
+        .card__title{
+          font-size: 30px;
+        }
+        .card__body p{
+          overflow: visible;
+          -webkit-line-clamp: inherit;
+        }
+      }
+    }
+  }
+  .card__heading{
+    position: relative;
+    padding-right: 35px;
+    min-height: 66px;
+    &:before{
+      position: absolute;
+      content: '';
+      width: 35px;
+      height: 35px;
+      display: block;
+      background-image: url(../assets/img/icon1.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+      top: 4px;
+      right: 0;
+    }
+  }
+  .develop__card:nth-child(2){
+    .card__heading:before{
+      background-image: url(../assets/img/icon2.png);
+    }
+  }
+  .develop__card:nth-child(3){
+    .card__heading:before{
+      background-image: url(../assets/img/icon4.png);
+    }
+  }
+  .develop__card:nth-child(4){
+    .card__heading:before{
+      background-image: url(../assets/img/icon3.png);
+    }
+  }
+  .card__title{
+    font-size: 27px;
+    line-height: 1.37;
+    letter-spacing: -0.84px;
+    font-weight: 400;
+  }
+  .card__body{
+    position: relative;
+    z-index: 1;
+    line-height: 1.5;
+    p{
+
+      -webkit-line-clamp: 4;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+  .wrap-btn{
+    text-align: right;
+  }
+}

@@ -1,0 +1,34 @@
+.form {
+  font-size: 16px;
+  text-align: center;
+  color: $dark;
+  .input {
+    display: block;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dce2e8;
+    border-radius: 8px;
+    line-height: 1;
+    padding: 17px 17px 18px;
+    text-align: center;
+    font-weight: 400;
+
+  }
+
+  ::placeholder {
+
+  }
+
+  &__group {
+
+  }
+  .btn_submit {
+
+
+    &:hover,
+    &:focus{
+
+    }
+
+  }
+}

@@ -1,0 +1,38 @@
+.section-contacts {
+  .section__slogan {
+    font-size: 35px;
+  }
+
+  .bold {
+    font-size: 90px;
+    line-height: .8;
+    margin-bottom: 35px;
+    display: inline-block;
+  }
+
+  .section__content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+  }
+
+  .address {
+    color: $dark-grey;
+    font-size: 20px;
+    line-height: 1.1;
+    padding-top: 36px;
+    padding-left: 36px;
+
+    &__item {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .link-phone {
+      font-size: 34px;
+      color: $dark;
+      line-height: .65;
+      margin-bottom: 10px;
+    }
+  }
+}

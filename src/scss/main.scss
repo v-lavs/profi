@@ -1,0 +1,29 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
+@import '../lib/jquery-nice-select-1.1.0/scss/nice-select';
+
+@import 'base/reset';
+@import 'base/base';
+@import 'base/typography';
+
+@import 'components/button';
+@import 'components/nav';
+@import 'components/modal';
+@import 'components/form';
+@import 'components/accordion';
+@import 'components/slider';
+@import 'components/custom-select';
+@import 'components/baguette-box';
+
+@import 'layout/sections/section-banner';
+@import 'layout/sections/section-gallery';
+@import 'layout/sections/section-partners';
+@import 'layout/sections/section-develop';
+@import 'layout/sections/section-about';
+@import 'layout/sections/section-contacts';
+
+
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';

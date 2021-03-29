@@ -1,0 +1,83 @@
+.section-gallery {
+  padding-top: 47px;
+  padding-bottom: 45px;
+  background-color: $light-grey;
+
+  .block-logo {
+    margin-bottom: 47px;
+  }
+
+  .logo-link {
+    display: inline-block;
+    margin-right: 92px;
+    vertical-align: middle;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .card-gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -40px;
+  }
+
+  .card-gallery {
+    padding: 0 40px;
+    width: 50%;
+    display: block;
+    font-size: 16px;
+    color: $dark;
+    margin-bottom: 130px;
+    &_big {
+      width: 100%;
+    }
+
+    &__wrap-thumb {
+      position: relative;
+      padding-top: 69%;
+      overflow: hidden;
+      margin-bottom: 45px;
+
+      &_big {
+        padding-top: 57%;
+      }
+    }
+
+    &__thumb {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transform: translate(-50%, -50%) scale(1);
+      transition: .45s;
+
+      &:hover, &:focus {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+    }
+
+    &__body {
+      padding: 0 20px 30px;
+
+  }
+    &__text{
+      opacity: .6;
+    }    &__title {
+      font-size: 25px;
+      font-weight: 400;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      color: $dark;
+    }
+  }
+  .see-more{
+    margin-left: auto;
+    margin-right: 40px;
+    margin-top: -11.25%;
+    margin-bottom: auto;
+  }
+}

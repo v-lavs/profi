@@ -1,0 +1,39 @@
+.menu {
+  display: flex;
+  font-size: 19px;
+
+  &__item {
+    position: relative;
+    transition: .35s;
+    text-transform: uppercase;
+    color: $dark;
+    line-height: 1.2;
+    margin-left: 3.75em;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: $dark-grey;
+      left: 0;
+      bottom: 0;
+      transition: width .35s;
+    }
+
+    &:hover:before,
+    &:focus:before {
+      width: 100%;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: $dark-grey;
+    }
+  }
+}
