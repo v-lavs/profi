@@ -24,7 +24,6 @@ $(document).ready(function () {
     });
 
     $('.btn-close, .backdrop, .menu__link').click(function (e) {
-        e.preventDefault();
         nav.removeClass('open');
         jQuery('.backdrop').fadeOut();
         $('body').removeClass('modal-open')
@@ -60,21 +59,6 @@ $(document).ready(function () {
             $('.header').removeClass('header_active')
         }
         scrollPrev = scrolled
-    });
-
-
-    // POPUPS PHONE
-    $('.popup-trigger-phone').click(function (e) {
-        e.preventDefault();
-        $('#popupPhone').addClass('modal_active');
-        $('.backdrop').fadeIn();
-        $('body').addClass('modal-open');
-    })
-
-    $('#closePopup,  #overlay').click(function () {
-        $('#popupPhone').removeClass('modal_active');
-        $('.backdrop').fadeOut();
-        $('body').removeClass('modal-open');
     });
 
 
@@ -118,32 +102,49 @@ $(document).ready(function () {
 
 
     //SLIDER-MARQUEE
-    let marqueeSliderRight = new Swiper('#marqueeLeft', {
 
-        slidesPerView: 5,
-        spaceBetween: 42,
-        speed: 2000,
-        loop: true,
-        autoplay: {
-            delay: 0,
-            disableOnInteraction: false,
+    function runMarquees() {
+        const selector = document.querySelectorAll("._marquee");
+        const styles = document.createElement("style");
+        const array = [];
+
+        function init() {
+            Array.prototype.forEach.call(selector, function (item, index) {
+                const marqueeBody = item.querySelector(".marquee-body");
+                const direction = item.getAttribute("data-direction");
+                array[index] = "marquees-" + Math.random().toString(36).substr(2, 9);
+                styles.innerHTML += "\n    @keyframes " + array[index] + " {\n      100% {\n        transform: translateX(" + ("right" === direction ? 0 : -marqueeBody.offsetWidth) + "px);\}\}\n";
+                item.style.animation = array[index] + " 20s 0s linear infinite";
+                item.style.transform = "translateX(" + ("right" === direction ? -marqueeBody.offsetWidth : 0) + "px)";
+            });
         }
+
+        document.body.appendChild(styles);
+        window.addEventListener("resize", function () {
+            styles.innerHTML = "";
+            init();
+        });
+        Array.prototype.forEach.call(selector, function (e) {
+            const marqueeBody = e.querySelector(".marquee-body");
+            e.appendChild(marqueeBody.cloneNode(true));
+            e.style.width = "100000px";
+        });
+        setTimeout(function () {
+            init();
+        }, 500);
+    }
+
+    runMarquees();
+
+    //SLIDER RELATED POST
+    var sliderRelatedPost = new Swiper('.slider__related-post', {
+        slidesPerView: 3,
+        spaceBetween: 87,
+        navigation: {
+            nextEl: '.wrap-slider .swiper-button-next',
+            prevEl: '.wrap-slider .swiper-button-prev',
+        },
     });
-
-    let marqueeSliderLeft = new Swiper('#marqueeRight', {
-
-        slidesPerView: 5,
-        spaceBetween: 42,
-        speed: 2000,
-        loop: true,
-        allowTouchMove: false,
-        autoplay: {
-            delay: 0,
-            disableOnInteraction: false,
-        }
-    });
-
-
 
     // CUSTOM SELECT
 
@@ -152,13 +153,13 @@ $(document).ready(function () {
 
     //POPUP VIDEO
 
-    $("#video-modal-trigger").click(function(e) {
+    $("#video-modal-trigger").click(function (e) {
         e.preventDefault();
         $("#video-popup-wrapper").addClass("active");
         $("body").addClass("modal-open");
     });
 
-    $("#video-popup-wrapper, #close-video-popup").click(function(e) {
+    $("#close-video-popup").click(function (e) {
         $("#video-popup-wrapper").removeClass("active");
         $("body").removeClass("modal-open");
         var video = $('#video');

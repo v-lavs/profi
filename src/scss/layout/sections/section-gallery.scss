@@ -1,6 +1,6 @@
 .section-gallery {
   padding-top: 47px;
-  padding-bottom: 45px;
+  padding-bottom: 175px;
   background-color: $light-grey;
 
   .block-logo {
@@ -26,18 +26,17 @@
   .card-gallery {
     padding: 0 40px;
     width: 50%;
-    display: block;
-    font-size: 16px;
-    color: $dark;
     margin-bottom: 130px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
     &_big {
       width: 100%;
     }
 
     &__wrap-thumb {
-      position: relative;
       padding-top: 69%;
-      overflow: hidden;
       margin-bottom: 45px;
 
       &_big {
@@ -45,39 +44,25 @@
       }
     }
 
-    &__thumb {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transform: translate(-50%, -50%) scale(1);
-      transition: .45s;
-
-      &:hover, &:focus {
-        transform: translate(-50%, -50%) scale(1.1);
-      }
-    }
-
     &__body {
       padding: 0 20px 30px;
+    }
 
-  }
-    &__text{
+    &__text {
       opacity: .6;
-    }    &__title {
-      font-size: 25px;
-      font-weight: 400;
+    }
+
+    &__title {
       margin-bottom: 8px;
       text-transform: uppercase;
-      color: $dark;
     }
   }
-  .see-more{
-    margin-left: auto;
-    margin-right: 40px;
-    margin-top: -11.25%;
-    margin-bottom: auto;
+
+  .see-more-wrap {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -30px;
+    transform: translateY(-100%);
   }
 }

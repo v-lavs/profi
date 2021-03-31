@@ -45,22 +45,22 @@ body {
 
 .dynamic-content {
   p {
-
+    font-size: 15px;
   }
 
-  ul {
-    li {
-
-    }
+  img {
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 70px;
   }
 }
 
 .see-more {
+  position: relative;
   display: inline-block;
   color: $yellow;
   font-size: 25px;
-  position: relative;
-  line-height: .5;
+  line-height: 1;
   padding-right: 104px;
   transition: .35s;
 

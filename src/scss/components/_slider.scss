@@ -1,38 +1,37 @@
-//.swiper-button-next,
-//.swiper-button-prev {
-//  background: $darkslateblue;
-//  border-radius: 50%;
-//  width: 64px;
-//  height: 64px;
-//
-//  &:before {
-//    position: absolute;
-//    content: '';
-//    display: block;
-//    background-image: url(../assets/img/svg/right-arrow.svg);
-//    width: 20px;
-//    height: 20px;
-//    left: 50%;
-//    top: 50%;
-//    transform: translate(-50%, -50%);
-//    background-repeat: no-repeat;
-//    background-size: contain;
-//    background-position: center;
-//  }
-//
-//  &:after {
-//    display: none;
-//  }
-//}
-//
-//.swiper-button-prev:before {
-//  background-image: url(../assets/img/svg/left-arrow.svg);
-//}
-//
-//.swiper-button-prev {
-//  left: 0;
-//}
-//
-//.swiper-button-next {
-//  right: 0;
-//}
+.swiper-button-next,
+.swiper-button-prev {
+
+  width: 56px;
+  height: 16px;
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    background-image: url(../assets/img/arrow-grey.png);
+    width: 56px;
+    height: 13px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &:after {
+    display: none;
+  }
+}
+
+.swiper-button-prev:before {
+  background-image: url(../assets/img/arrow-left.png);
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}

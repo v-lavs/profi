@@ -318,12 +318,22 @@ body.modal-open {
   text-transform: uppercase;
 }
 
+.dynamic-content p {
+  font-size: 15px;
+}
+
+.dynamic-content img {
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
 .see-more {
+  position: relative;
   display: inline-block;
   color: #ffd200;
   font-size: 25px;
-  position: relative;
-  line-height: .5;
+  line-height: 1;
   padding-right: 104px;
   transition: .35s;
 }
@@ -462,6 +472,7 @@ body.modal-open {
   left: 0;
   bottom: 0;
   transition: width .35s;
+  z-index: 1;
 }
 
 .menu__item:hover:before,
@@ -489,8 +500,8 @@ body.modal-open {
   bottom: 0;
   background: rgba(0, 0, 0, 0.6);
   z-index: 1100;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .popup-wrapper.active {
@@ -500,26 +511,15 @@ body.modal-open {
 .popup-wrapper .btn-close {
   right: 0;
   top: 0;
-}
-
-.popup {
-  position: relative;
-  padding-top: 25.12%;
-  width: 50%;
-  overflow: hidden;
-  height: 0;
-  border-radius: 8px;
+  z-index: 100;
 }
 
 .popup .video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-width: 0;
-  outline-width: 0;
-  z-index: 1;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .form {
@@ -693,6 +693,45 @@ body.modal-open {
   transform: rotate(-180deg);
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  width: 56px;
+  height: 16px;
+}
+
+.swiper-button-next:before,
+.swiper-button-prev:before {
+  position: absolute;
+  content: '';
+  display: block;
+  background-image: url(../assets/img/arrow-grey.png);
+  width: 56px;
+  height: 13px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  display: none;
+}
+
+.swiper-button-prev:before {
+  background-image: url(../assets/img/arrow-left.png);
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
 .nice-select {
   border: none;
   border-bottom: 2px solid  #c9d4dd;
@@ -855,6 +894,47 @@ body.modal-open {
   font-size: 22px;
 }
 
+.card-gallery {
+  display: block;
+  font-size: 16px;
+  color: #000000;
+}
+
+.card-gallery__wrap-thumb {
+  position: relative;
+  overflow: hidden;
+  padding-top: 79%;
+  margin-bottom: 14px;
+}
+
+.card-gallery__thumb {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%) scale(1);
+  transition: .45s;
+}
+
+.card-gallery__thumb:hover,
+.card-gallery__thumb:focus {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.card-gallery__title {
+  margin-bottom: 0;
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.card-gallery__body {
+  padding: 0 7px;
+}
+
 .section-banner {
   color: #ffffff;
   position: relative;
@@ -905,7 +985,7 @@ body.modal-open {
 
 .section-gallery {
   padding-top: 47px;
-  padding-bottom: 45px;
+  padding-bottom: 175px;
   background-color: #f9f9f9;
 }
 
@@ -932,10 +1012,11 @@ body.modal-open {
 .section-gallery .card-gallery {
   padding: 0 40px;
   width: 50%;
-  display: block;
-  font-size: 16px;
-  color: #000000;
   margin-bottom: 130px;
+}
+
+.section-gallery .card-gallery:last-of-type {
+  margin-bottom: 0;
 }
 
 .section-gallery .card-gallery_big {
@@ -943,30 +1024,12 @@ body.modal-open {
 }
 
 .section-gallery .card-gallery__wrap-thumb {
-  position: relative;
   padding-top: 69%;
-  overflow: hidden;
   margin-bottom: 45px;
 }
 
 .section-gallery .card-gallery__wrap-thumb_big {
   padding-top: 57%;
-}
-
-.section-gallery .card-gallery__thumb {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: translate(-50%, -50%) scale(1);
-  transition: .45s;
-}
-
-.section-gallery .card-gallery__thumb:hover,
-.section-gallery .card-gallery__thumb:focus {
-  transform: translate(-50%, -50%) scale(1.1);
 }
 
 .section-gallery .card-gallery__body {
@@ -978,18 +1041,16 @@ body.modal-open {
 }
 
 .section-gallery .card-gallery__title {
-  font-size: 25px;
-  font-weight: 400;
   margin-bottom: 8px;
   text-transform: uppercase;
-  color: #000000;
 }
 
-.section-gallery .see-more {
-  margin-left: auto;
-  margin-right: 40px;
-  margin-top: -11.25%;
-  margin-bottom: auto;
+.section-gallery .see-more-wrap {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -30px;
+  transform: translateY(-100%);
 }
 
 .section-partners {
@@ -998,21 +1059,44 @@ body.modal-open {
   background-color: #f9f9f9;
 }
 
-.section-partners .marquee .swiper-wrapper {
-  -webkit-transition-timing-function: linear !important;
-  transition-timing-function: linear !important;
+.section-partners .marquee {
+  display: block;
+  overflow: hidden;
+  width: 100%;
 }
 
-.section-partners .marquee__item {
+.section-partners .marquee-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100vw;
+}
+
+.section-partners .marquee-line {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  width: 200%;
+  padding-bottom: 42px;
+  animation: marquee-anim 20s linear infinite;
+  will-change: transform;
+}
+
+.section-partners .partner-block {
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: .5;
   height: 95px;
+  min-width: 20vw;
+  padding: 0 15px;
 }
 
-.section-partners .marquee__img {
+.section-partners .partner-block img {
+  display: block;
   width: auto;
+  max-height: 100%;
+  height: auto;
 }
 
 .section-develop {
@@ -1447,14 +1531,6 @@ body.modal-open {
   margin-bottom: 14px;
 }
 
-.page-projects .section-gallery .card-gallery__title {
-  margin-bottom: 0;
-}
-
-.page-projects .section-gallery .card-gallery__body {
-  padding: 0 7px;
-}
-
 .page-services .accordion .card-list {
   display: flex;
   flex-wrap: wrap;
@@ -1516,6 +1592,24 @@ body.modal-open {
 
 .page-services .section-team .wrap-thumb {
   width: 32%;
+}
+
+.single-project .main__img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 614px;
+  margin-bottom: 70px;
+}
+
+.single-project .related-post {
+  padding-bottom: 17%;
+  padding-top: 7%;
+}
+
+.single-project .wrap-slider {
+  padding: 0 130px;
+  position: relative;
 }
 
 @media only screen and (max-width: 960px) {
