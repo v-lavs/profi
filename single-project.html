@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--    зaкрыть индексацию-->
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="robots" content="noindex">
+    <meta name="yandex" content="none">
+
+    <title>Профи Сингл</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="dist/main.css">
+</head>
+<body>
+
+<div class="backdrop"></div>
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <button type="button" class="btn-burger" aria-label="бургер-меню">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+            <a href="/" class="header__logo">
+                <picture>
+                    <source srcset="assets/img/big-logo.png" media="(max-width: 960px)">
+                    <img src="assets/img/logo-site.png" alt="Space Cleaning" class="img img-logo">
+                </picture>
+            </a>
+
+            <nav class="header__nav">
+
+                <button class="btn-close" aria-label="Закрити"></button>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Проекти</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Послуги</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Контакти</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <div class="lang-switch">
+                <a href="#" class="lang-switch__link lang-switch__link_active">UA</a>
+                <a href="#" class="lang-switch__link">EN</a>
+            </div>
+            <div class="backdrop" id="overlay"></div>
+        </div>
+    </header>
+
+    <main class="main single-project">
+<div class="main__img"></div>
+        <section class="section-contacts">
+            <div class="container">
+                <div class="section__slogan">
+                    <p><span class="bold">Задизайнемо?</span></p>
+                    <p>Напишіть нам і ми відповімо вам протягом доби:</p>
+                </div>
+                <div class="address">
+                    <span class="address__item">м. Львів  вул. Залізнична, 56</span>
+                    <a href="tel:+38 097 137 40 04" class="address__item link-phone">+38 097 137 40 04</a>
+                    <a href="tel:+38 073 221 05 86" class="address__item link-phone">+38 073 221 05 86</a>
+                    <span class="address__item">Ми працюємо з 10:00 до 19:00</span>
+                </div>
+                <form action="#" method="post" class="form">
+                    <textarea class="textarea" name="description" cols="62" rows="5"
+                              placeholder="опишіть будь ласка завдання"></textarea>
+                    <div class="field-box">
+                        <div class="form-group">
+                            <label class="hide">Ім’я</label>
+                            <input class="input" type="text" placeholder="Ім’я">
+                        </div>
+                        <div class="form-group">
+                            <label class="hide">телефон</label>
+                            <input class="input" type="text" placeholder="телефон">
+                        </div>
+                        <div class="form-group">
+                            <label class="hide">email</label>
+                            <input class="input" type="text" placeholder="email">
+                        </div>
+                    </div>
+                    <div class="form__footer">
+                        <button type="submit" class="btn btn_dark btn_submit">надіслати</button>
+                        <select name="link-brief" class="custom-select form-control">
+                            <option data-display="brief" value="none" hidden="">brief</option>
+                            <option value="1">brief 1</option>
+                            <option value="2">brief 2</option>
+                            <option value="3">brief 3</option>
+                            <option value="4">brief 4</option>
+                        </select>
+
+                        <a href="#" class="link-presentation">presentation</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <button class="btn_written">
+        <img src="assets/img/btn-written.png" alt="" class="img_written">
+    </button>
+    <div class="block-written">
+        <div class="block-written__header">
+            <button type="button" aria-label="Закрити" class="btn-close"></button>
+            <a href="#" class="logo">
+                <img src="assets/img/big-logo.png" alt="" class="logo__img">
+            </a>
+            <h4 class="block-written__title"><span class="bold">Напишіть нам</span><br>
+                Яку послугу ви бажаєте замовити?</h4>
+        </div>
+        <div class="block-written__body">
+            <form action="#" method="post" class="form">
+                    <textarea class="textarea" name="description" cols="62" rows="5"
+                              placeholder="опишіть будь ласка завдання"></textarea>
+                <div class="field-box">
+                    <div class="form-group">
+                        <label class="hide">Ім’я</label>
+                        <input class="input" type="text" placeholder="Ім’я">
+                    </div>
+                    <div class="form-group">
+                        <label class="hide">телефон</label>
+                        <input class="input" type="text" placeholder="телефон">
+                    </div>
+                    <div class="form-group">
+                        <label class="hide">email</label>
+                        <input class="input" type="text" placeholder="email">
+                    </div>
+                </div>
+                <div class="form__footer">
+                    <button type="submit" class="btn btn_dark btn_submit">надіслати</button>
+
+                    <div class="wrap-link">
+                        <select name="link-brief" class="custom-select form-control">
+                            <option data-display="Download brief" value="none" hidden="">Download brief</option>
+                            <option value="1">brief 1</option>
+                            <option value="2">brief 2</option>
+                            <option value="3">brief 3</option>
+                            <option value="4">brief 4</option>
+                        </select>
+
+                        <a href="#" class="link-presentation">Download presentation</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="block-written__footer">
+            <a href="tel:+38 097 137 40 04" class="phone-link">+38 097 137 40 04</a>
+            <a href="tel:+38 073 221 05 86" class="phone-link">+38 073 221 05 86</a>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="social-bar">
+                <a href="#" class="social__link"><span class="hide">Instagram</span>
+                    <img class="icon" src="assets/img/insta.png" alt="">
+                </a>
+                <a href="#" class="social__link"><span class="hide">Youtube</span>
+                    <img class="icon" src="assets/img/youtybe.png" alt="">
+                </a>
+                <a href="#" class="social__link"><span class="hide">Behance</span>
+                    <img class="icon" src="assets/img/bechance.png" alt="">
+                </a>
+                <a href="#" class="social__link"><span class="hide">Facebook</span>
+                    <img class="icon" src="assets/img/fb.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="infinity-block">
+            <div class="infinite-line"></div>
+            <div class="infinite-line"></div>
+            <div class="infinite-line"></div>
+            <div class="infinite-line"></div>
+        </div>
+    </footer>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="dist/main.js"></script>
+</body>
+</html>

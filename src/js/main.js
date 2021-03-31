@@ -116,26 +116,40 @@ $(document).ready(function () {
         },
     });
 
+
+    //SLIDER-MARQUEE
+    let marqueeSliderRight = new Swiper('#marqueeLeft', {
+
+        slidesPerView: 5,
+        spaceBetween: 42,
+        speed: 2000,
+        loop: true,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+        }
+    });
+
+    let marqueeSliderLeft = new Swiper('#marqueeRight', {
+
+        slidesPerView: 5,
+        spaceBetween: 42,
+        speed: 2000,
+        loop: true,
+        allowTouchMove: false,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+        }
+    });
+
+
+
     // CUSTOM SELECT
 
     $('.custom-select').niceSelect();
 
 
-//BAGUETTE BOX
-    $('.gallery a').click(function (e) {
-        e.preventDefault();
-    });
-
-    baguetteBox.run('.gallery', {
-        buttons: 'auto', // arrows navigation
-        noScrollbars: false,
-        bodyClass: 'baguetteBox-open',
-        titleTag: false,
-        async: false,
-        preload: 2,
-        animation: 'fadeIn',
-        overlayBackgroundColor: 'rgba (1,1,1, .25)'
-    });
     //POPUP VIDEO
 
     $("#video-modal-trigger").click(function(e) {

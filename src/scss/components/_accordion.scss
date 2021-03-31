@@ -1,29 +1,20 @@
 .accordion {
-  //background-color: $lightskyblue;
-  padding: 80px 13% 40px;
-  border-radius: 10px;
   overflow: hidden;
-
-  .panel {
-    width: 100%;
-  }
 
   .open-panel {
     position: absolute;
     display: flex;
-    width: 32px;
-    height: 32px;
-    top: 25%;
+    width: 26px;
+    height: 15px;
+    top: 50%;
     right: 0;
-    border-radius: 50%;
-    //background-color: $darkslateblue;
 
     &:before {
       position: absolute;
       content: '';
-      background-image: url(../assets/img/svg/plus.svg);
-      width: 20px;
-      height: 20px;
+      background-image: url(../assets/img/arrow-down1.png);
+      width: 24px;
+      height: 13px;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -35,15 +26,60 @@
   }
 
   .panel {
+    position: relative;
+    padding-bottom: 56px;
+    width: 100%;
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      border: 1px solid #000000;
+      opacity: 0.2;
+      left: 0;
+      bottom: 0;
+      width: 80%;
+    }
+
     &__heading {
       position: relative;
-      padding: 20px 35px 20px 0;
+      padding: 7% 35px 35px 0;
       transition: .7s;
+    }
 
-      &_title {
-        margin: 0 0 15px 0;
-        color: $dark;
+    &:first-child {
+      .panel__heading {
+        padding-top: 5%;
       }
+    }
+
+    &__title {
+      margin: 0 0 60px 0;
+      color: $dark;
+      font-size: 45px;
+      font-weight: 400;
+    }
+
+    .icon {
+      width: 33px;
+      height: 33px;
+      display: inline-block;
+      margin-left: 100px;
+
+      img {
+        vertical-align: middle;
+      }
+    }
+
+    &__text {
+      font-size: 19px;
+      line-height: 1.32;
+      width: 80%;
+
+    }
+
+    &:last-child:after {
+      display: none;
     }
   }
 
@@ -51,24 +87,22 @@
     display: none;
     padding: 5px 0 40px;
 
-    &__body p {
-      line-height: 2;
-      margin: 0 0 20px 0;
+    &__body {
+      background-color: $light-grey;
+      padding: 56px 6px 5px 76px;
     }
   }
 
   .open {
     display: block;
 
+    .panel__text {
+      width: 100%;
+    }
+
     .open-panel {
       transition: transform .5s;
-      transform: rotate(-45deg);
-      //background-color: $gray;
-
-      &:before {
-
-      }
+      transform: rotate(-180deg);
     }
   }
-
 }

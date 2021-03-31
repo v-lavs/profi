@@ -28,13 +28,16 @@ body {
   border: 0;
 }
 
+.main {
+  padding-top: 100px;
+}
+
 .section {
 
   &__title {
     font-size: 80px;
     font-weight: 400;
-    color: $dark;
-    opacity: .09;
+    color: $gray-100;
     text-transform: uppercase;
   }
 
@@ -52,7 +55,7 @@ body {
   }
 }
 
-.see-more{
+.see-more {
   display: inline-block;
   color: $yellow;
   font-size: 25px;
@@ -60,7 +63,8 @@ body {
   line-height: .5;
   padding-right: 104px;
   transition: .35s;
-  &:after{
+
+  &:after {
     position: absolute;
     content: '';
     display: block;
@@ -71,13 +75,14 @@ body {
     top: 50%;
     transform: translateY(-50%);
   }
+
   &:hover,
-  &:focus{
+  &:focus {
     color: $dark-grey;
   }
 }
 
-.btn_written{
+.btn_written {
   position: fixed;
   right: 58px;
   top: 50%;
@@ -90,7 +95,8 @@ body {
   overflow: hidden;
   border: none;
   z-index: 300;
-  img{
+
+  img {
     vertical-align: middle;
   }
 }
