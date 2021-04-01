@@ -98,11 +98,33 @@
   @include respond-to($sm){
     max-width: 100%;
     padding: 50px 30px;
+    .btn-close {
+      right: 10px;
+    }
     .mob-hide{
       display: none;
     }
     .form__footer{
       padding-left: 0;
+    }
+    .block-written__footer{
+
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .phone-link{
+      margin-right: 20px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+    .wrap-link{
+
+    }
+
+    .form .custom-select,
+    .form .link-presentation{
+      width: 40%;
     }
   }
 }

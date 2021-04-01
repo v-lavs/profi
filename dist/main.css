@@ -1719,10 +1719,6 @@ body.modal-open {
     min-height: 600px;
   }
 
-  .section-partners .partner-block img {
-    max-height: 75%;
-  }
-
   .section-develop .section-develop:before {
     top: 14%;
   }
@@ -1936,7 +1932,7 @@ body.modal-open {
 
   .form .custom-select,
   .form .link-presentation {
-    width: 40%;
+    width: 48%;
     border: none;
     padding-right: 10px;
     padding-left: 46px;
@@ -1949,13 +1945,13 @@ body.modal-open {
     left: 0;
   }
 
-  .form .custom-select {
-    margin-right: 56px;
-  }
-
   .block-written {
     max-width: 100%;
     padding: 50px 30px;
+  }
+
+  .block-written .btn-close {
+    right: 10px;
   }
 
   .block-written .mob-hide {
@@ -1964,6 +1960,24 @@ body.modal-open {
 
   .block-written .form__footer {
     padding-left: 0;
+  }
+
+  .block-written .block-written__footer {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .block-written .phone-link {
+    margin-right: 20px;
+  }
+
+  .block-written .phone-link:last-child {
+    margin-right: 0;
+  }
+
+  .block-written .form .custom-select,
+  .block-written .form .link-presentation {
+    width: 40%;
   }
 
   .section-banner .banner__slide {
@@ -2055,6 +2069,11 @@ body.modal-open {
     background-color: #ffffff;
   }
 
+  .section-partners .partner-block {
+    height: 60px;
+    min-width: 40vw;
+  }
+
   .section-develop:before {
     top: 5%;
   }
@@ -2119,6 +2138,11 @@ body.modal-open {
     font-size: 35px;
   }
 
+  .section-partners .partner-block {
+    min-width: 50vw;
+    height: 50px;
+  }
+
   .section-develop {
     padding-top: 0;
   }
@@ -2160,6 +2184,10 @@ body.modal-open {
 
   .section-about .about-block__content .bold {
     font-size: 44px;
+  }
+
+  .section-about .section__title {
+    margin-bottom: 44px;
   }
 
   .section-contacts .bold {

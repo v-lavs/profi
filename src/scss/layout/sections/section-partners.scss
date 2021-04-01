@@ -43,10 +43,20 @@
   }
   @include respond-to($xl){
     .partner-block img {
-      max-height: 75%;
+      //max-height: 75%;
     }
   }
   @include respond-to($sm){
     background-color: $white;
+    .partner-block {
+      height: 60px;
+      min-width: 40vw;
+    }
+  }
+  @include respond-to($xs){
+    .partner-block {
+      min-width: 50vw;
+      height: 50px;
+    }
   }
 }

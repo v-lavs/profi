@@ -94,6 +94,7 @@ $(document).ready(function () {
 
         slidesPerView: 1,
         loop: true,
+        effect: 'fade',
         autoplay: {
             delay: 6000,
         },
