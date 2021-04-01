@@ -54,6 +54,7 @@
     }
 
     &__title {
+
       margin: 0 0 60px 0;
       color: $dark;
       font-size: 45px;
@@ -61,6 +62,7 @@
     }
 
     .icon {
+
       width: 33px;
       height: 33px;
       display: inline-block;
@@ -105,4 +107,37 @@
       transform: rotate(-180deg);
     }
   }
+
+  @include respond-to($xl) {
+    .open-panel {
+      top: 30%;
+    }
+    @include respond-to($lg) {
+
+      .open-panel {
+        top: 18%;
+      }
+      .panel__text {
+        font-size: 17px;
+      }
+
+      .panel__title {
+        font-size: 30px;
+      }
+    }
+  }
+  @include respond-to($md) {
+    .panel__title{
+      margin-bottom: 35px;
+    }
+    .panel__text{
+      width: 100%;
+    }
+    .open-panel{
+      top: auto;
+      bottom: -18px;
+      left: 0;
+    }
+  }
+
 }
