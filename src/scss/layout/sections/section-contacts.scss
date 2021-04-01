@@ -74,4 +74,26 @@
       }
     }
   }
+  @include respond-to($sm){
+    padding-bottom: 63px;
+    .section__slogan{
+      font-size: 17px;
+      margin-bottom: 50px;
+    }
+    .bold{
+      font-size: 45px;
+      margin-bottom: 11px;
+    }
+    .address .link-phone{
+      font-size: 40px;
+    }
+  }
+  @include respond-to($xs){
+    .bold{
+      font-size: 39px;
+    }
+    .address .link-phone{
+      font-size: 34px;
+    }
+  }
 }

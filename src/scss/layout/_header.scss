@@ -76,7 +76,7 @@
       justify-content: space-between;
     }
     &__logo {
-      max-width: 35px;
+      max-width: 34px;
       margin-left: auto;
     }
     .lang-switch{
@@ -123,6 +123,16 @@
             display: none;
           }
         }
+      }
+    }
+  }
+  @include respond-to($xs){
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .lang-switch{
+      font-size: 13px;
+      &__link{
+        padding: 0 6px;
       }
     }
   }

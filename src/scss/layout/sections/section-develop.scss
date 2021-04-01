@@ -165,9 +165,11 @@
     }
     .develop__list{
       flex-wrap: wrap;
+      margin: 0 -20px;
     }
     .develop__card{
-      width: 45%;
+      width: 43%;
+      margin: 0 20px;
     }
     .card__body p{
       overflow: visible;
@@ -182,6 +184,36 @@
   @include respond-to($md){
     .develop__card{
       width: 100%;
+    }
+  }
+  @include respond-to($sm){
+    &:before{
+      top: 5%;
+    }
+    .card__title{
+      font-size: 27px;
+    }
+    .card__heading{
+      margin-bottom: 40px;
+      min-height: auto;
+    }
+    .card__body{
+      min-height: auto;
+    }
+  }
+  @include respond-to($xs){
+    padding-top: 0;
+    &:before{
+      top: 7%;
+    }
+    .develop__card:last-of-type{
+      margin-bottom: 0;
+    }
+    .wrap-btn{
+      text-align: left;
+    }
+    .see-more{
+      margin-left: 28px;
     }
   }
 }

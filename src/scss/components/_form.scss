@@ -61,10 +61,45 @@
       }
     }
   }
-  @include respond-to($xl){
-    .field-box{
+
+  @include respond-to($xl) {
+    .field-box {
       width: 32%;
     }
   }
-
+  @include respond-to($sm) {
+    font-size: 17px;
+    .form__footer{
+      flex-wrap: wrap;
+      padding-left: 28px;
+      padding-top: 30px;
+    }
+    .textarea{
+      max-height: 54px;
+      margin-bottom: 16px;
+    }
+    .input{
+      margin-bottom: 16px;
+    }
+    .wrap-btn{
+      width: 100%;
+      margin-bottom: 74px;
+    }
+    .custom-select,
+    .link-presentation{
+      width: 40%;
+      border: none;
+      padding-right: 10px;
+      padding-left: 46px;
+    }
+    .link-presentation:before,
+    .custom-select:before{
+      width: 34px;
+      height: 37px;
+      left: 0;
+    }
+    .custom-select{
+      margin-right: 56px;
+    }
+  }
 }

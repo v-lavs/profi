@@ -93,7 +93,10 @@ $(document).ready(function () {
     let swiperBanner = new Swiper('.banner__slider', {
 
         slidesPerView: 1,
-        spaceBetween: 10,
+        loop: true,
+        autoplay: {
+            delay: 6000,
+        },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',

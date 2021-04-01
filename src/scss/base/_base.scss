@@ -30,6 +30,9 @@ body {
 
 .main {
   padding-top: 100px;
+  @include respond-to($xs){
+    padding-top: 73px;
+  }
 }
 
 .section {
@@ -38,7 +41,17 @@ body {
     font-weight: 400;
     color: $gray-100;
     text-transform: uppercase;
+    @include respond-to($lg){
+        font-size: 60px;
+    }
+    @include respond-to($sm){
+      font-size: 35px;
+      line-height: 1.06;
+      width: 90%;
+      margin-bottom: 32px;
+    }
   }
+
 }
 
 .dynamic-content {
@@ -78,6 +91,7 @@ body {
   &:focus {
     color: $dark-grey;
   }
+
 }
 
 .btn_written {
@@ -103,12 +117,11 @@ body {
     height: 76px;
     right: 30px;
   }
-}
-
-@include respond-to($lg) {
-  .section{
-    .section__title {
-      font-size: 60px;
-    }
+  @include respond-to($xs){
+    width: 57px;
+    height: 57px;
+    right: 20px;
   }
 }
+
+

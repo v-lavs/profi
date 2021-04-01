@@ -18,8 +18,8 @@
   @include respond-to($sm) {
     max-width: 460px;
   }
-  //@include respond-to($xs) {
-  //  max-width: 100%;
-  //  padding: 0 15px;
-  //}
+  @include respond-to($xs) {
+    max-width: 100%;
+    padding: 0 20px;
+  }
 }

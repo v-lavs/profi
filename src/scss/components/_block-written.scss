@@ -95,4 +95,14 @@
   .phone-link {
     font-size: 22px;
   }
+  @include respond-to($sm){
+    max-width: 100%;
+    padding: 50px 30px;
+    .mob-hide{
+      display: none;
+    }
+    .form__footer{
+      padding-left: 0;
+    }
+  }
 }

@@ -1,7 +1,8 @@
 .section-banner {
   color: $white;
   position: relative;
-  .banner__slide{
+
+  .banner__slide {
     min-height: 740px;
     background-position: center;
     background-repeat: no-repeat;
@@ -10,26 +11,31 @@
     align-items: center;
     overflow: hidden;
   }
-  .banner__content{
+
+  .banner__content {
     max-width: 400px;
   }
-  .banner__title{
+
+  .banner__title {
     font-size: 50px;
     font-weight: 300;
     margin-bottom: 35px;
     line-height: 1;
   }
-  .bold{
+
+  .bold {
     font-weight: 700;
     font-size: 80px;
     text-transform: uppercase;
   }
-  .text{
+
+  .text {
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 48px;
   }
-  .wrap-icon{
+
+  .wrap-icon {
     width: 22px;
     height: 35px;
     position: absolute;
@@ -38,8 +44,49 @@
     transform: translateX(-50%);
     z-index: 1;
   }
-  @include respond-to($xl){
-    min-height: 600px;
+
+  @include respond-to($xl) {
+    .banner__slide {
+      min-height: 600px;
+    }
+  }
+  @include respond-to($md){
+    .banner__slide .text{
+      display: none;
+    }
+  }
+  @include respond-to($sm){
+
+    .banner__slide{
+      background-position: right 33% top;
+      padding-bottom: 45px;
+      align-items: flex-end;
+      min-height: 505px;
+      .btn{
+        display: none;
+      }
+    }
+    .banner__title{
+      font-size: 30px;
+      text-align: center;
+    }
+    .bold{
+      font-size: 50px;
+    }
+  }
+  @include respond-to($xs){
+    .banner__title{
+      font-size: 20px;
+      text-align: center;
+    }
+    .bold{
+      font-size: 35px;
+    }
+  }
+  .wrap-icon {
+    width: 18px;
+    height: 30px;
+    bottom: 15px;
   }
 }
 

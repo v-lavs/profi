@@ -16,7 +16,7 @@
 
     &__content {
       display: flex;
-
+      align-items: center;
       .wrap-img {
         max-width: 243px;
         margin-right: 50px;
@@ -107,5 +107,31 @@
       max-width: 100%;
       width: 100%;
     }
+  }
+  @include respond-to($sm){
+    .about-block{
+      padding: 28px;
+    }
+  }
+  @include respond-to($xs){
+   .about-block{
+     border: none;
+     padding: 0;
+     &__content {
+       padding: 0 0 0 20px;
+       .wrap-img{
+         max-width: 130px;
+         margin-right: 55px;
+       }
+       .slogan{
+         font-size: 19px;
+         max-width: 115px;
+       }
+       .bold{
+         font-size: 44px;
+       }
+     }
+   }
+
   }
 }

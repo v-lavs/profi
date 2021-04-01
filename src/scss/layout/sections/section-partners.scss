@@ -46,4 +46,7 @@
       max-height: 75%;
     }
   }
+  @include respond-to($sm){
+    background-color: $white;
+  }
 }
