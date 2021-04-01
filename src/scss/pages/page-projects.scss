@@ -2,19 +2,60 @@
   .section-gallery {
     padding-bottom: 28px;
     background-color: $white;
+
     .card-gallery__list {
       margin: 0 -23px;
     }
+
     .card-gallery {
       padding: 0 23px;
       width: 33%;
       margin-bottom: 11.5%;
 
       &__wrap-thumb {
-         padding-top: 79%;
-         margin-bottom: 14px;
-       }
+        padding-top: 79%;
+        margin-bottom: 14px;
+      }
+    }
+
+    .block-logo {
+      display: none;
+    }
+  }
+
+  @include respond-to($xl) {
+    .section-gallery {
+      .card-gallery {
+        width: 50%;
+      }
+    }
+  }
+  @include respond-to($lg) {
+    .section-gallery {
+      .block-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 27px;
+      }
+      .logo-link{
+        max-width: 140px;
+        margin-right: 37px;
+        &:last-child{
+          margin-right: 0;
+          max-width: 47px;
+        }
+      }
 
     }
   }
+  @include respond-to($xs) {
+    .section-gallery {
+      .card-gallery {
+        width: 100%;
+        margin-bottom: 19.5%;
+      }
+    }
+  }
 }
+
