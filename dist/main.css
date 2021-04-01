@@ -1919,6 +1919,7 @@ body.modal-open {
   .form .textarea {
     max-height: 54px;
     margin-bottom: 16px;
+    font-size: 17px;
   }
 
   .form .input {
