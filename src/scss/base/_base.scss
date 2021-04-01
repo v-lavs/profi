@@ -30,7 +30,7 @@ body {
 
 .main {
   padding-top: 100px;
-  @include respond-to($xs){
+  @include respond-to($xs) {
     padding-top: 73px;
   }
 }
@@ -41,10 +41,10 @@ body {
     font-weight: 400;
     color: $gray-100;
     text-transform: uppercase;
-    @include respond-to($lg){
-        font-size: 60px;
+    @include respond-to($lg) {
+      font-size: 60px;
     }
-    @include respond-to($sm){
+    @include respond-to($sm) {
       font-size: 35px;
       line-height: 1.06;
       width: 90%;
@@ -57,12 +57,22 @@ body {
 .dynamic-content {
   p {
     font-size: 15px;
+    margin-bottom: 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
-  img {
-    width: 100%;
-    margin-top: 70px;
-    margin-bottom: 70px;
+  @include respond-to($sm) {
+    p {
+      font-size: 12px;
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -117,7 +127,7 @@ body {
     height: 76px;
     right: 30px;
   }
-  @include respond-to($xs){
+  @include respond-to($xs) {
     width: 57px;
     height: 57px;
     right: 20px;

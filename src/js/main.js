@@ -142,12 +142,31 @@ $(document).ready(function () {
 
     //SLIDER RELATED POST
     var sliderRelatedPost = new Swiper('.slider__related-post', {
-        slidesPerView: 3,
-        spaceBetween: 87,
+        slidesPerView: 2,
+        spaceBetween: 12,
         navigation: {
             nextEl: '.wrap-slider .swiper-button-next',
             prevEl: '.wrap-slider .swiper-button-prev',
         },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 12,
+            },
+            960: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+           1440: {
+                slidesPerView: 3,
+                spaceBetween: 87,
+            },
+
+        }
     });
 
     // CUSTOM SELECT
