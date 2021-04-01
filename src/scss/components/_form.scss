@@ -68,7 +68,7 @@
     }
   }
   @include respond-to($sm) {
-    font-size: 17px;
+    font-size: 16px;
     .form__footer{
       flex-wrap: wrap;
       padding-left: 28px;
@@ -77,10 +77,12 @@
     .textarea{
       max-height: 54px;
       margin-bottom: 16px;
-      font-size: 17px;
+      padding-left: 20px;
+      font-size: 16px;
     }
     .input{
       margin-bottom: 16px;
+      padding-left: 20px;
     }
     .wrap-btn{
       width: 100%;

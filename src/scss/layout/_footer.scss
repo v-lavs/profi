@@ -75,4 +75,13 @@
       background-position: 250px 0;
     }
   }
+
+  @include respond-to($xs){
+    .social__link{
+      margin-right: 58px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
 }
