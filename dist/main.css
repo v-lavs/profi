@@ -2121,6 +2121,34 @@ body.modal-open {
     left: 0;
   }
 
+  .accordion .panel {
+    position: relative;
+  }
+
+  .accordion .panel__heading {
+    position: static;
+  }
+
+  .accordion .open-panel {
+    top: auto;
+    bottom: 35px;
+    left: 0;
+  }
+
+  .accordion .panel__title {
+    padding-top: 40px;
+    position: relative;
+  }
+
+  .accordion .panel .icon {
+    margin-left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+  }
+
   .block-written {
     max-width: 100%;
     padding: 50px 30px;

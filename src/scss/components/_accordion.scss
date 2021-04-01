@@ -139,5 +139,29 @@
       left: 0;
     }
   }
-
+  @include respond-to($sm) {
+    .panel{
+      position: relative;
+    }
+    .panel__heading{
+      position: static;
+    }
+    .open-panel{
+      top: auto;
+      bottom: 35px;
+      left: 0;
+    }
+    .panel__title{
+      padding-top: 40px;
+      position: relative;
+    }
+    .panel .icon{
+      margin-left: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 28px;
+      height: 28px;
+    }
+  }
 }
