@@ -42,4 +42,36 @@
       float: right;
     }
   }
+  @include respond-to($xl){
+    .section__slogan{
+      font-size: 28px;
+    }
+    .bold{
+      font-size: 70px;
+    }
+  }
+  @include respond-to($lg){
+    .section__slogan{
+      width: 100%;
+    }
+    .address{
+      order: 1;
+      padding-left: 0;
+      padding-top: 65px;
+      margin: 0 auto;
+    }
+    .form {
+      .field-box{
+        float: none;
+        width: 100%;
+        max-width: 100%;
+      }
+      .textarea{
+        width: 100%;
+      }
+      &__footer{
+        width: 100%;
+      }
+    }
+  }
 }

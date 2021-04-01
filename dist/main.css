@@ -763,38 +763,6 @@ body.modal-open {
   width: 100%;
 }
 
-.baguetteBox-button#next-button,
-.baguetteBox-button#previous-button {
-  border-radius: 50%;
-  width: 64px;
-  height: 64px;
-}
-
-.baguetteBox-button#next-button:before,
-.baguetteBox-button#previous-button:before {
-  position: absolute;
-  content: '';
-  display: block;
-  background-image: url(../assets/img/svg/right-arrow.svg);
-  width: 20px;
-  height: 20px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.baguetteBox-button#next-button svg,
-.baguetteBox-button#previous-button svg {
-  display: none;
-}
-
-.baguetteBox-button#previous-button:before {
-  transform: translate(-50%, -50%) rotate(180deg);
-}
-
 .block-written {
   position: fixed;
   max-width: 530px;
@@ -985,7 +953,7 @@ body.modal-open {
 
 .section-gallery {
   padding-top: 47px;
-  padding-bottom: 175px;
+  padding-bottom: 8%;
   background-color: #f9f9f9;
 }
 
@@ -1102,15 +1070,15 @@ body.modal-open {
 .section-develop {
   position: relative;
   background-color: #ffffff;
-  padding-top: 240px;
-  padding-bottom: 240px;
+  padding-top: 12%;
+  padding-bottom: 10.75%;
 }
 
 .section-develop:before {
   position: absolute;
   content: '';
   display: block;
-  height: 50px;
+  height: 45px;
   width: 150vw;
   background-color: #ffd200;
   top: 18%;
@@ -1131,7 +1099,6 @@ body.modal-open {
 .section-develop .develop__card {
   position: relative;
   width: 25%;
-  min-height: 400px;
   margin: 0 10px;
   background-color: #ffffff;
   padding: 44px 35px 64px;
@@ -1188,7 +1155,7 @@ body.modal-open {
   background-image: url(../assets/img/icon1.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto;
+  background-size: contain;
   top: 4px;
   right: 0;
 }
@@ -1216,10 +1183,13 @@ body.modal-open {
   position: relative;
   z-index: 1;
   line-height: 1.5;
+  min-height: 218px;
+  display: flex;
+  align-items: center;
 }
 
 .section-develop .card__body p {
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -1230,7 +1200,7 @@ body.modal-open {
 }
 
 .section-about {
-  padding-bottom: 350px;
+  padding-bottom: 18%;
 }
 
 .section-about .section__title {
@@ -1555,6 +1525,10 @@ body.modal-open {
   color: #000000;
 }
 
+.page-services .section-services {
+  padding-bottom: 4.5%;
+}
+
 .page-services .section-team {
   padding-bottom: 9%;
 }
@@ -1594,6 +1568,31 @@ body.modal-open {
   width: 32%;
 }
 
+.page-services .section-partners {
+  background-color: #ffffff;
+  padding-bottom: 22%;
+}
+
+.page-services .section-partners .section__title {
+  margin-bottom: 80px;
+}
+
+.page-services .section-about {
+  position: relative;
+}
+
+.page-services .section-about:before {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 45px;
+  width: 200vw;
+  background-color: #ffd200;
+  top: 50%;
+  left: -35%;
+  transform: translateY(-50%) rotate(28deg);
+}
+
 .single-project .main__img {
   background-repeat: no-repeat;
   background-position: center;
@@ -1612,11 +1611,208 @@ body.modal-open {
   position: relative;
 }
 
+.single-project .article__heading {
+  display: flex;
+}
+
+.single-project .content__heading {
+  font-size: 15px;
+  width: 55%;
+  text-transform: uppercase;
+  padding-right: 30px;
+}
+
+.single-project .block-information {
+  width: 28%;
+  flex-shrink: 0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.single-project .block-information__item {
+  margin-bottom: 50px;
+}
+
+.single-project .block-information__item:last-child {
+  margin-bottom: 0;
+}
+
+.single-project .block-information .information {
+  color: #8b8b8b;
+}
+
+.single-project .article__title {
+  font-size: 30px;
+  color: #000000;
+  margin-bottom: 55px;
+}
+
+.single-project .dynamic-content p {
+  text-align: center;
+}
+
+@media only screen and (max-width: 1440px) {
+  .btn_written {
+    width: 76px;
+    height: 76px;
+    right: 30px;
+  }
+
+  .section-develop .develop__list {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 55px;
+  }
+
+  .section-develop .develop__card {
+    padding: 28px 28px 44px;
+  }
+
+  .section-develop .develop__card:hover .card__title,
+  .section-develop .develop__card:focus .card__title {
+    font-size: 28px;
+  }
+
+  .section-develop .card__title {
+    font-size: 25px;
+  }
+
+  .section-develop .card__heading:before {
+    width: 27px;
+    height: 27px;
+  }
+
+  .section-about .about-block {
+    padding-left: 57px;
+  }
+
+  .section-about .about-block__content .bold {
+    font-size: 66px;
+  }
+
+  .section-about .about-block__content .slogan {
+    font-size: 29px;
+  }
+
+  .section-about .wrap-img {
+    max-width: 205px;
+  }
+
+  .container {
+    max-width: 1125px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .form .field-box {
+    width: 32%;
+  }
+
+  .section-banner {
+    min-height: 600px;
+  }
+
+  .section-partners .partner-block img {
+    max-height: 75%;
+  }
+
+  .section-develop .section-develop:before {
+    top: 14%;
+  }
+
+  .section-develop .develop__list {
+    flex-wrap: wrap;
+  }
+
+  .section-develop .develop__card {
+    width: 45%;
+  }
+
+  .section-develop .card__body p {
+    overflow: visible;
+    -webkit-line-clamp: inherit;
+  }
+
+  .section-about .about-block {
+    padding-left: 57px;
+  }
+
+  .section-about .about-block__content .bold {
+    font-size: 54px;
+    margin-bottom: 22px;
+  }
+
+  .section-about .about-block__content .slogan {
+    font-size: 24px;
+    max-width: 175px;
+  }
+
+  .section-about .about-block__content .wrap-img {
+    max-width: 160px;
+  }
+
+  .section-contacts .section__slogan {
+    font-size: 28px;
+  }
+
+  .section-contacts .bold {
+    font-size: 70px;
+  }
+
+  .container {
+    max-width: 940px;
+  }
+}
+
 @media only screen and (max-width: 960px) {
-  .baguetteBox-button#next-button,
-  .baguetteBox-button#previous-button {
-    width: 47px;
-    height: 47px;
+  .section .section__title {
+    font-size: 60px;
+  }
+
+  .section-develop .develop__card {
+    margin-bottom: 40px;
+  }
+
+  .section-about .about-block {
+    flex-wrap: wrap;
+  }
+
+  .section-about .about-block__content {
+    margin-bottom: 25px;
+  }
+
+  .section-about .about-block__wrap-thumb {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .section-contacts .section__slogan {
+    width: 100%;
+  }
+
+  .section-contacts .address {
+    order: 1;
+    padding-left: 0;
+    padding-top: 65px;
+    margin: 0 auto;
+  }
+
+  .section-contacts .form .field-box {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .section-contacts .form .textarea {
+    width: 100%;
+  }
+
+  .section-contacts .form__footer {
+    width: 100%;
+  }
+
+  .container {
+    max-width: 720px;
   }
 
   .header .container {
@@ -1678,16 +1874,18 @@ body.modal-open {
   }
 }
 
-@media only screen and (max-width: 576px) {
-  .baguetteBox-button#next-button,
-  .baguetteBox-button#previous-button {
-    width: 30px;
-    height: 30px;
+@media only screen and (max-width: 768px) {
+  .section-develop .develop__card {
+    width: 100%;
   }
 
-  .baguetteBox-button#next-button:before,
-  .baguetteBox-button#previous-button:before {
-    width: 12px;
-    height: 12px;
+  .container {
+    max-width: 610px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .container {
+    max-width: 460px;
   }
 }

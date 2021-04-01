@@ -3,21 +3,21 @@
   max-width: 1550px;
   margin: 0 auto;
   padding: 0 25px;
-  //@include respond-to($xxl) {
-  //  max-width: 1140px;
-  //}
-  //@include respond-to($xl) {
-  //  max-width: 1040px;
-  //}
-  //@include respond-to($lg) {
-  //  max-width: 760px;
-  //}
-  //@include respond-to($md) {
-  //  max-width: 650px;
-  //}
-  //@include respond-to($sm) {
-  //  max-width: 460px;
-  //}
+  @include respond-to($xxl) {
+    max-width: 1125px;
+  }
+  @include respond-to($xl) {
+    max-width: 940px;
+  }
+  @include respond-to($lg) {
+    max-width: 720px;
+  }
+  @include respond-to($md) {
+    max-width: 610px;
+  }
+  @include respond-to($sm) {
+    max-width: 460px;
+  }
   //@include respond-to($xs) {
   //  max-width: 100%;
   //  padding: 0 15px;

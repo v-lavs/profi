@@ -1,17 +1,61 @@
-.single-project{
-  .main__img{
+.single-project {
+  .main__img {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     min-height: 614px;
     margin-bottom: 70px;
   }
-  .related-post{
+
+  .related-post {
     padding-bottom: 17%;
     padding-top: 7%;
   }
-  .wrap-slider{
+
+  .wrap-slider {
     padding: 0 130px;
     position: relative;
+  }
+
+  .article__heading {
+    display: flex;
+
+  }
+
+  .content__heading {
+    font-size: 15px;
+    width: 55%;
+    text-transform: uppercase;
+    padding-right: 30px;
+  }
+
+  .block-information {
+    width: 28%;
+    flex-shrink: 0;
+    font-size: 15px;
+    line-height: 1.4;
+
+    &__item {
+      margin-bottom: 50px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .information {
+      color: $dark-grey;
+    }
+
+  }
+
+  .article__title {
+    font-size: 30px;
+    color: $dark;
+    margin-bottom: 55px;
+  }
+
+  .dynamic-content p {
+    text-align: center;
   }
 }

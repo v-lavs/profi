@@ -28,7 +28,7 @@
                 <span class="line"></span>
                 <span class="line"></span>
             </button>
-            <a href="/" class="header__logo">
+            <a href="index.html" class="header__logo">
                 <picture>
                     <source srcset="assets/img/big-logo.png" media="(max-width: 960px)">
                     <img src="assets/img/logo-site.png" alt="Space Cleaning" class="img img-logo">
@@ -64,7 +64,7 @@
         <section class="section-team">
             <div class="container">
                 <div class="section__content">
-                    <h2 class="section__title">profi creative group</h2>
+                    <h1 class="section__title">profi creative group</h1>
                     <div class="section__sub-title"># focusing to create</div>
                     <div class="section__text">
                         <p>
@@ -338,6 +338,69 @@
                 </div>
             </div>
         </section>
+        <section class="section-partners">
+            <div class="container">
+                <h2 class="section__title">Наші клієнти:</h2>
+            </div>
+            <div class="marquee">
+                <div class="marquee-line _marquee" data-direction="left">
+                    <div class="marquee-body">
+                        <div class="partner-block">
+                            <img src="assets/img/logo11.png" alt="" class="img marquee__img">
+                        </div>
+                        <div class="partner-block">
+                            <img src="assets/img/logo3.png" alt="" class="img marquee__img">
+                        </div>
+                        <div class="partner-block">
+                            <img src="assets/img/logo8.png" alt="" class="img marquee__img">
+                        </div>
+                        <div class="partner-block">
+                            <img src="assets/img/logo6.png" alt="" class="img marquee__img">
+                        </div>
+                        <div class="partner-block">
+                            <img src="assets/img/logo4.png" alt="" class="img marquee__img">
+                        </div>
+                    </div>
+                </div>
+                <div class="marquee-line _marquee" data-direction="right">
+                    <div class="marquee-body">
+                        <div class="partner-block">
+                            <img src="assets/img/logo10.png" alt="" class="img marquee__img">
+                        </div>
+                        <div class="partner-block">
+                            <img src="assets/img/logo9.png" alt="" class="img marquee__img">
+                        </div>
+                        <div class="partner-block">
+                            <img src="assets/img/logo1.png" alt="" class="img marquee__img">
+                        </div>
+                        <div class="partner-block">
+                            <img src="assets/img/logo7.png" alt="" class="img marquee__img">
+                        </div>
+                        <div class="partner-block">
+                            <img src="assets/img/logo5.png" alt="" class="img marquee__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-about">
+            <div class="container">
+                <div class="about-block">
+                    <div class="about-block__content">
+                        <div class="wrap-img">
+                            <img src="assets/img/big-logo.png" alt="" class="img">
+                        </div>
+                        <div class="slogan">
+                            <span class="bold">ми</span> створюємо бренди, які люблять люди
+                        </div>
+                    </div>
+                    <a href="#" class="about-block__wrap-thumb" id="video-modal-trigger">
+                        <img src="assets/img/poster.jpg" alt="" class="poster">
+                        <span id="playButton" class="btn_play" aria-label="button-play"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
         <section class="section-contacts">
             <div class="container">
                 <div class="section__slogan">
@@ -459,6 +522,14 @@
             <div class="infinite-line"></div>
         </div>
     </footer>
+    <div class="popup-wrapper" id="video-popup-wrapper">
+        <button id="close-video-popup" class="close-popup  btn-close"></button>
+        <div class="popup">
+            <video class="video" controls src="assets/video/burgers.mp4" width="900" height="530" id="video">
+                Тег video не підтримується вашим браузером.
+            </video>
+        </div>
+    </div>
 </div>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

@@ -61,4 +61,10 @@
       }
     }
   }
+  @include respond-to($xl){
+    .field-box{
+      width: 32%;
+    }
+  }
+
 }

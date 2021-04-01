@@ -1,13 +1,14 @@
-.section-develop{
+.section-develop {
   position: relative;
   background-color: $white;
-  padding-top: 240px;
-  padding-bottom: 240px;
-  &:before{
+  padding-top: 12%;
+  padding-bottom: 10.75%;
+
+  &:before {
     position: absolute;
     content: '';
     display: block;
-    height: 50px;
+    height: 45px;
     width: 150vw;
     background-color: $yellow;
     top: 18%;
@@ -15,24 +16,26 @@
     transform: rotate(32deg);
     transform-origin: 0 100%;
   }
-  .section__title{
+
+  .section__title {
     margin-bottom: 48px;
   }
-  .develop{
-    &__list{
+
+  .develop {
+    &__list {
       display: flex;
       margin: 0 -45px 110px;
     }
-    &__card{
+
+    &__card {
       position: relative;
       width: 25%;
-      min-height: 400px;
       margin: 0 10px;
       background-color: $white;
       padding: 44px 35px 64px;
       font-size: 17px;
 
-      &:before{
+      &:before {
         position: absolute;
         content: '';
         display: block;
@@ -46,27 +49,33 @@
         transition: transform .35s;
         transform-origin: 0% 100%;
       }
-      &:hover:before{
+
+      &:hover:before {
         transform: scaleY(1);
       }
+
       &:hover,
-      &:focus{
+      &:focus {
         font-size: 19px;
-        .card__title{
+
+        .card__title {
           font-size: 30px;
         }
-        .card__body p{
+
+        .card__body p {
           overflow: visible;
           -webkit-line-clamp: inherit;
         }
       }
     }
   }
-  .card__heading{
+
+  .card__heading {
     position: relative;
     padding-right: 35px;
     min-height: 66px;
-    &:before{
+
+    &:before {
       position: absolute;
       content: '';
       width: 35px;
@@ -75,45 +84,104 @@
       background-image: url(../assets/img/icon1.png);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: auto;
+      background-size: contain;
       top: 4px;
       right: 0;
     }
   }
-  .develop__card:nth-child(2){
-    .card__heading:before{
+
+  .develop__card:nth-child(2) {
+    .card__heading:before {
       background-image: url(../assets/img/icon2.png);
     }
   }
-  .develop__card:nth-child(3){
-    .card__heading:before{
+
+  .develop__card:nth-child(3) {
+    .card__heading:before {
       background-image: url(../assets/img/icon4.png);
     }
   }
-  .develop__card:nth-child(4){
-    .card__heading:before{
+
+  .develop__card:nth-child(4) {
+    .card__heading:before {
       background-image: url(../assets/img/icon3.png);
     }
   }
-  .card__title{
+
+  .card__title {
     font-size: 27px;
     line-height: 1.37;
     letter-spacing: -0.84px;
     font-weight: 400;
   }
-  .card__body{
+
+  .card__body {
     position: relative;
     z-index: 1;
     line-height: 1.5;
-    p{
+    min-height: 218px;
+    display: flex;
+    align-items: center;
 
-      -webkit-line-clamp: 4;
+    p {
+
+      -webkit-line-clamp: 3;
       display: -webkit-box;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
   }
-  .wrap-btn{
+
+  .wrap-btn {
     text-align: right;
+  }
+
+  @include respond-to($xxl) {
+    .develop__list{
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 55px;
+    }
+    .develop__card {
+      padding: 28px 28px 44px;
+      &:hover,
+      &:focus {
+        .card__title {
+          font-size: 28px;
+        }
+      }
+    }
+    .card__title {
+      font-size: 25px;
+    }
+    .card__heading:before {
+      width: 27px;
+      height: 27px;
+    }
+  }
+  @include respond-to($xl){
+    .section-develop:before{
+      top: 14%;
+    }
+    .develop__list{
+      flex-wrap: wrap;
+    }
+    .develop__card{
+      width: 45%;
+    }
+    .card__body p{
+      overflow: visible;
+      -webkit-line-clamp: inherit;
+    }
+  }
+  @include respond-to($lg){
+    .develop__card{
+      margin-bottom: 40px;
+    }
+  }
+  @include respond-to($md){
+    .develop__card{
+      width: 100%;
+    }
   }
 }
