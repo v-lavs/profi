@@ -1752,6 +1752,14 @@ body.modal-open {
     max-width: 1120px;
   }
 
+  .header .lang-switch {
+    margin-left: 8%;
+  }
+
+  .header .menu__item {
+    margin-left: 40px;
+  }
+
   .page-services .section-team .section__heading {
     padding-top: 0;
   }
@@ -1943,7 +1951,7 @@ body.modal-open {
   }
 
   .header .header__nav {
-    padding: 80px 20px;
+    padding: 140px 20px 100px;
     position: fixed;
     right: 0;
     top: 0;
@@ -1970,7 +1978,7 @@ body.modal-open {
   }
 
   .header .header__nav .menu__item {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     margin-left: 0;
     width: 100%;
     border-radius: 10px;
