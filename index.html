@@ -36,7 +36,6 @@
             </a>
 
             <nav class="header__nav">
-
                 <button class="btn-close" aria-label="Закрити"></button>
                 <ul class="menu">
                     <li class="menu__item">
@@ -46,9 +45,8 @@
                         <a href="page-services.html" class="menu__link">Послуги</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Контакти</a>
+                        <a href="#contacts" class="menu__link">Контакти</a>
                     </li>
-
                 </ul>
             </nav>
 
@@ -66,6 +64,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide banner__slide"
                          style="background-image: url(assets/img/slide-banner1.jpg);">
+                        <div class="desktop-prev desktop-arrow"></div>
                         <div class="container">
                             <div class="banner__content">
                                 <a href="#" class="banner__link"><h2 class="banner__title"><span
@@ -79,9 +78,11 @@
                                 <a href="#" class="btn btn_light">переглянути</a>
                             </div>
                         </div>
+                        <div class="desktop-next desktop-arrow"></div>
                     </div>
                     <div class="swiper-slide banner__slide"
                          style="background-image: url(assets/img/img-project4.jpg);">
+                        <div class="desktop-prev desktop-arrow"></div>
                         <div class="container">
                             <div class="banner__content">
                                 <a href="single-project.html" class="banner__link"><h2 class="banner__title"><span
@@ -95,14 +96,17 @@
                                 <a href="#" class="btn btn_light">переглянути</a>
                             </div>
                         </div>
+                        <div class="desktop-next desktop-arrow"></div>
                     </div>
                 </div>
             </div>
-            <div class="wrap-icon">
-                <img src="assets/img/down.png" alt="" class="img">
-            </div>
+
+            <a href="#section-gallery" class="js-scroll-to scroll-down">
+                <img src="assets/img/svg/scroll-icon.svg" alt="" class="img">
+            </a>
         </section>
-        <section class="section-gallery">
+
+        <section class="section-gallery" id="section-gallery">
             <div class="container">
                 <div class="block-logo">
                     <a href="#" class="logo-link">
