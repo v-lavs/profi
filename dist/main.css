@@ -1090,12 +1090,17 @@ body.modal-open {
   content: '';
   display: block;
   height: 45px;
-  width: 150vw;
+  width: 0;
   background-color: #ffd200;
   top: 18%;
   left: -10%;
   transform: rotate(32deg);
   transform-origin: 0 100%;
+  transition: linear 5s;
+}
+
+.section-develop.anim_active:before {
+  width: 200vw;
 }
 
 .section-develop .section__title {

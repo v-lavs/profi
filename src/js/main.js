@@ -3,7 +3,7 @@
 * */
 
 //= include ../../node_modules/jquery/dist/jquery.js ;
-
+//= include ../lib/waypoints/index.js
 //= include ../lib/jquery-nice-select-1.1.0/js/jquery.nice-select.js
 
 // CUSTOM SCRIPTS
@@ -146,16 +146,12 @@ $(document).ready(function () {
         if ($(window).width() <= 768) {
             if (!accordionSlider) {
                 accordionSlider = new Swiper('.accordion__slider', {
-                    slidesPerView: 1,
+                    slidesPerView: 2,
                     spaceBetween: 20,
                     breakpoints: {
                         540: {
                             slidesPerView: 1,
                         },
-                        768: {
-                            slidesPerView: 2,
-                            spaceBetween: 20
-                        }
                     },
                     pagination: {
                         el: '.swiper-pagination',
@@ -175,7 +171,7 @@ $(document).ready(function () {
 
 
     //SLIDER RELATED POST
-    var sliderRelatedPost = new Swiper('.slider__related-post', {
+    const sliderRelatedPost = new Swiper('.slider__related-post', {
         slidesPerView: 2,
         spaceBetween: 12,
         navigation: {
@@ -219,10 +215,18 @@ $(document).ready(function () {
     $("#close-video-popup").click(function (e) {
         $("#video-popup-wrapper").removeClass("active");
         $("body").removeClass("modal-open");
-        var video = $('#video');
+        const video = $('#video');
 
         video.attr('src', '');
-        var src = video.attr('src');
+        const src = video.attr('src');
         video.attr('src', src);
     });
+
+    // ANIMATION
+    const lineGrowth = $('.section-develop').waypoint(function (direction) {
+        $(this.element).addClass('anim_active')
+    }, {
+        offset: '35%'
+    });
+
 });

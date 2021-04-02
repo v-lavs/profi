@@ -9,12 +9,17 @@
     content: '';
     display: block;
     height: 45px;
-    width: 150vw;
+    width: 0;
     background-color: $yellow;
     top: 18%;
     left: -10%;
     transform: rotate(32deg);
     transform-origin: 0 100%;
+    transition: linear 5s;
+  }
+
+  &.anim_active:before {
+      width: 200vw;
   }
 
   .section__title {
@@ -137,13 +142,14 @@
   }
 
   @include respond-to($xxl) {
-    .develop__list{
+    .develop__list {
       margin-left: 0;
       margin-right: 0;
       margin-bottom: 55px;
     }
     .develop__card {
       padding: 28px 28px 44px;
+
       &:hover,
       &:focus {
         .card__title {
@@ -159,60 +165,60 @@
       height: 27px;
     }
   }
-  @include respond-to($xl){
-    .section-develop:before{
+  @include respond-to($xl) {
+    .section-develop:before {
       top: 14%;
     }
-    .develop__list{
+    .develop__list {
       flex-wrap: wrap;
       margin: 0 -20px;
     }
-    .develop__card{
+    .develop__card {
       width: 43%;
       margin: 0 20px;
     }
-    .card__body p{
+    .card__body p {
       overflow: visible;
       -webkit-line-clamp: inherit;
     }
   }
-  @include respond-to($lg){
-    .develop__card{
+  @include respond-to($lg) {
+    .develop__card {
       margin-bottom: 40px;
     }
   }
-  @include respond-to($md){
-    .develop__card{
+  @include respond-to($md) {
+    .develop__card {
       width: 100%;
     }
   }
-  @include respond-to($sm){
-    &:before{
+  @include respond-to($sm) {
+    &:before {
       top: 5%;
     }
-    .card__title{
+    .card__title {
       font-size: 27px;
     }
-    .card__heading{
+    .card__heading {
       margin-bottom: 40px;
       min-height: auto;
     }
-    .card__body{
+    .card__body {
       min-height: auto;
     }
   }
-  @include respond-to($xs){
+  @include respond-to($xs) {
     padding-top: 0;
-    &:before{
+    &:before {
       top: 7%;
     }
-    .develop__card:last-of-type{
+    .develop__card:last-of-type {
       margin-bottom: 0;
     }
-    .wrap-btn{
+    .wrap-btn {
       text-align: left;
     }
-    .see-more{
+    .see-more {
       margin-left: 28px;
     }
   }
