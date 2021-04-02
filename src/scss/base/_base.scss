@@ -10,6 +10,10 @@
 body {
   font: 400 1em $main-font;
   color: $dark;
+  @include respond-to($md) {
+    font-size: 17px;
+    line-height: 1.5;
+  }
 
   &.modal-open {
     overflow: hidden;
@@ -89,7 +93,7 @@ body {
     position: absolute;
     content: '';
     display: block;
-    background-image: url(../assets/img/arrow-right.png);
+    background-image: url('../assets/img/arrow-right.png');
     width: 56px;
     height: 13px;
     right: 0;
@@ -133,12 +137,5 @@ body {
     right: 20px;
   }
 }
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 
 

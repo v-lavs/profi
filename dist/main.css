@@ -341,7 +341,7 @@ body.modal-open {
   position: absolute;
   content: '';
   display: block;
-  background-image: url(../assets/img/arrow-right.png);
+  background-image: url("../assets/img/arrow-right.png");
   width: 56px;
   height: 13px;
   right: 0;
@@ -371,12 +371,6 @@ body.modal-open {
 
 .btn_written img {
   vertical-align: middle;
-}
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 .btn {
@@ -596,7 +590,7 @@ body.modal-open {
   overflow: hidden;
 }
 
-.accordion .open-panel {
+.accordion .accordion__arrow {
   position: absolute;
   display: flex;
   width: 24px;
@@ -615,7 +609,8 @@ body.modal-open {
 
 .accordion .panel {
   position: relative;
-  padding-bottom: 56px;
+  padding-top: 85px;
+  padding-bottom: 125px;
   width: 100%;
 }
 
@@ -632,13 +627,8 @@ body.modal-open {
 }
 
 .accordion .panel__heading {
-  position: relative;
-  padding: 7% 35px 35px 0;
+  padding: 0 35px 0 0;
   transition: .7s;
-}
-
-.accordion .panel:first-child .panel__heading {
-  padding-top: 5%;
 }
 
 .accordion .panel__title {
@@ -647,12 +637,13 @@ body.modal-open {
   color: #000000;
   font-size: 45px;
   font-weight: 400;
+  cursor: pointer;
 }
 
 .accordion .panel .icon {
   width: 33px;
   height: 33px;
-  margin-left: 8.225%;
+  margin-left: 7.225%;
   display: inline-block;
   vertical-align: middle;
 }
@@ -673,12 +664,12 @@ body.modal-open {
 
 .accordion .panel-collapse {
   display: none;
-  padding: 5px 0 40px;
+  padding: 55px 0 0;
 }
 
 .accordion .panel-collapse__body {
   background-color: #f9f9f9;
-  padding: 55px 0;
+  padding: 40px 0;
 }
 
 .accordion .open {
@@ -689,8 +680,8 @@ body.modal-open {
   width: 100%;
 }
 
-.accordion .open .open-panel {
-  transform: rotate(-180deg) translateY(-50%);
+.accordion .open .accordion__arrow {
+  transform: rotate(-180deg) translateY(50%);
 }
 
 .swiper-button-next,
@@ -704,7 +695,7 @@ body.modal-open {
   position: absolute;
   content: '';
   display: block;
-  background-image: url(../assets/img/arrow-grey.png);
+  background-image: url("../assets/img/arrow-grey.png");
   width: 56px;
   height: 13px;
   left: 50%;
@@ -721,7 +712,7 @@ body.modal-open {
 }
 
 .swiper-button-prev:before {
-  background-image: url(../assets/img/arrow-left.png);
+  background-image: url("../assets/img/arrow-left.png");
 }
 
 .swiper-button-prev {
@@ -730,6 +721,18 @@ body.modal-open {
 
 .swiper-button-next {
   right: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  border: 1px solid #000;
+  background-color: transparent;
+  margin: 0 6px !important;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #000;
 }
 
 .nice-select {
@@ -1521,27 +1524,28 @@ body.modal-open {
   flex-wrap: wrap;
 }
 
+.page-services .accordion .swiper-pagination {
+  bottom: 35px;
+  padding: 3px;
+}
+
+.page-services .accordion .card__body {
+  padding: 0 17px;
+}
+
 .page-services .accordion .card-list__item {
   width: 33.33%;
   line-height: 1.37;
   font-size: 16px;
   color: #8b8b8b;
-  padding: 0 5%;
-}
-
-.page-services .accordion .card-list .card__body {
-  padding: 0 17px;
-  margin-bottom: 70px;
+  padding: 35px 5%;
 }
 
 .page-services .accordion .card-list .title {
   font-size: 19px;
   margin-bottom: 14px;
   color: #000000;
-}
-
-.page-services .section-services {
-  padding-bottom: 4.5%;
+  text-transform: uppercase;
 }
 
 .page-services .section-team {
@@ -1551,6 +1555,7 @@ body.modal-open {
 .page-services .section-team .section__title {
   font-size: 58px;
   font-weight: 700;
+  line-height: 1;
   color: #000000;
   font-family: "Montserrat", sans-serif;
 }
@@ -1562,6 +1567,14 @@ body.modal-open {
   margin-bottom: 36px;
 }
 
+.page-services .section-team .section__text {
+  font-size: 19px;
+  line-height: 1.625;
+  color: #8b8b8b;
+  width: 50%;
+  margin-bottom: 70px;
+}
+
 .page-services .section-team .section__heading {
   width: 50%;
   padding-top: 64px;
@@ -1569,11 +1582,6 @@ body.modal-open {
   line-height: 1.74;
   color: #404040;
   float: left;
-}
-
-.page-services .section-team .section__text {
-  margin-bottom: 56px;
-  width: 50%;
 }
 
 .page-services .section-team .wrap-thumb {
@@ -1836,7 +1844,9 @@ body.modal-open {
   }
 
   .accordion .panel__title {
-    font-size: 30px;
+    font-size: 27px;
+    line-height: 30px;
+    font-weight: 700;
   }
 
   .swiper-button-next,
@@ -2004,18 +2014,53 @@ body.modal-open {
 }
 
 @media only screen and (max-width: 768px) {
+  body {
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .accordion .panel {
+    position: relative;
+    padding-top: 55px;
+    padding-bottom: 95px;
+  }
+
+  .accordion .panel .panel-collapse {
+    padding-top: 25px;
+  }
+
+  .accordion .panel__heading {
+    padding-right: 0;
+  }
+
   .accordion .panel__title {
     position: static;
     margin-bottom: 35px;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 0;
+  }
+
+  .accordion .panel__title .icon {
+    margin-left: 0;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 16px;
+  }
+
+  .accordion .panel-collapse__body {
+    padding: 0;
   }
 
   .accordion .panel__text {
     width: 100%;
   }
 
-  .accordion .open-panel {
+  .accordion .accordion__arrow {
     top: auto;
-    bottom: -18px;
+    bottom: 35px;
+    width: 33px;
+    height: 18px;
     left: 0;
   }
 
@@ -2035,9 +2080,18 @@ body.modal-open {
     flex-wrap: nowrap;
   }
 
-  .page-services .accordion .swiper-slide,
+  .page-services .accordion .card__body {
+    margin-bottom: 0;
+  }
+
   .page-services .accordion .card-list__item {
     width: 100%;
+    padding: 15px 20px 20px;
+    font-size: 15px;
+  }
+
+  .page-services .accordion .card__body {
+    padding: 0;
   }
 
   .single-project .content__heading {
@@ -2101,33 +2155,6 @@ body.modal-open {
   .form .custom-select:before {
     width: 34px;
     height: 37px;
-    left: 0;
-  }
-
-  .accordion .panel {
-    position: relative;
-  }
-
-  .accordion .panel__heading {
-    position: static;
-  }
-
-  .accordion .panel__title {
-    display: flex;
-    flex-direction: column-reverse;
-    padding-top: 0;
-  }
-
-  .accordion .panel__title .icon {
-    margin-left: 0;
-    width: 30px;
-    height: 30px;
-    margin-bottom: 16px;
-  }
-
-  .accordion .open-panel {
-    top: auto;
-    bottom: 35px;
     left: 0;
   }
 
@@ -2301,6 +2328,7 @@ body.modal-open {
 
   .container {
     max-width: 460px;
+    padding: 0 25px;
   }
 
   .page-services .section-team .section__heading,
@@ -2325,6 +2353,8 @@ body.modal-open {
   }
 
   .page-services .section-team .section__text {
+    font-size: 17px;
+    line-height: 26px;
     margin-bottom: 34px;
   }
 
@@ -2457,7 +2487,6 @@ body.modal-open {
 
   .container {
     max-width: 100%;
-    padding: 0 20px;
   }
 
   .header {

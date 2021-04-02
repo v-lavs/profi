@@ -1,7 +1,7 @@
 .accordion {
   overflow: hidden;
 
-  .open-panel {
+  .accordion__arrow {
     position: absolute;
     display: flex;
     width: 24px;
@@ -21,7 +21,8 @@
 
   .panel {
     position: relative;
-    padding-bottom: 56px;
+    padding-top: 85px;
+    padding-bottom: 125px;
     width: 100%;
 
     &:after {
@@ -37,15 +38,8 @@
     }
 
     &__heading {
-      position: relative;
-      padding: 7% 35px 35px 0;
+      padding: 0 35px 0 0;
       transition: .7s;
-    }
-
-    &:first-child {
-      .panel__heading {
-        padding-top: 5%;
-      }
     }
 
     &__title {
@@ -54,12 +48,13 @@
       color: $dark;
       font-size: 45px;
       font-weight: 400;
+      cursor: pointer;
     }
 
     .icon {
       width: 33px;
       height: 33px;
-      margin-left: 8.225%;
+      margin-left: 7.225%;
       display: inline-block;
       vertical-align: middle;
 
@@ -81,11 +76,11 @@
 
   .panel-collapse {
     display: none;
-    padding: 5px 0 40px;
+    padding: 55px 0 0;
 
     &__body {
       background-color: $light-grey;
-      padding: 55px 0;
+      padding: 40px 0;
     }
   }
 
@@ -96,8 +91,8 @@
       width: 100%;
     }
 
-    .open-panel {
-      transform: rotate(-180deg) translateY(-50%);
+    .accordion__arrow {
+      transform: rotate(-180deg) translateY(50%);
     }
   }
 
@@ -107,46 +102,55 @@
     }
 
     .panel__title {
-      font-size: 30px;
+      font-size: 27px;
+      line-height: 30px;
+      font-weight: 700;
     }
   }
 
   @include respond-to($md) {
-    .panel__title {
-      position: static;
-      margin-bottom: 35px;
-    }
-    .panel__text {
-      width: 100%;
-    }
-    .open-panel {
-      top: auto;
-      bottom: -18px;
-      left: 0;
-    }
-  }
-  @include respond-to($sm) {
     .panel {
       position: relative;
-    }
-    .panel__heading {
-      position: static;
-    }
-    .panel__title {
-      display: flex;
-      flex-direction: column-reverse;
-      padding-top: 0;
+      padding-top: 55px;
+      padding-bottom: 95px;
 
-      .icon {
-        margin-left: 0;
-        width: 30px;
-        height: 30px;
-        margin-bottom: 16px;
+      .panel-collapse {
+        padding-top: 25px;
+      }
+
+      &__heading {
+        padding-right: 0;
+      }
+
+      &__title {
+        position: static;
+        margin-bottom: 35px;
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 0;
+
+        .icon {
+          margin-left: 0;
+          width: 30px;
+          height: 30px;
+          margin-bottom: 16px;
+        }
+      }
+
+      &-collapse__body {
+        padding: 0;
+      }
+
+      &__text {
+        width: 100%;
       }
     }
-    .open-panel {
+
+    .accordion__arrow {
       top: auto;
       bottom: 35px;
+      width: 33px;
+      height: 18px;
       left: 0;
     }
   }

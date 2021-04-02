@@ -62,36 +62,66 @@ $(document).ready(function () {
     });
 
 
+    //SLIDER-ACCORDION
+    let accordionSlider;
+
+    function slidersInit() {
+        if ($(window).width() <= 768) {
+            if (!accordionSlider) {
+                accordionSlider = new Swiper('.accordion__slider', {
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                });
+            }
+        } else {
+            if (accordionSlider) {
+                if ($.isArray(accordionSlider)) {
+                    accordionSlider.forEach(function (slider) {
+                        slider.destroy(true, true)
+                    });
+                } else {
+                    accordionSlider.destroy(true, true);
+                }
+                accordionSlider = null;
+            }
+        }
+    }
+
+    slidersInit();
+
     //ACCORDION
+    const slideAnimationTime = 500;
+
     $('#accordion .panel__heading').on('click', function () {
         if ($(this).hasClass('open')) {
             $(this).removeClass('open');
-            $(this)
-                .siblings('.panel-collapse')
-                .slideUp(500);
-            $('#accordion .panel__heading .open-panel')
-                .removeClass('open-panel:before')
-                .addClass('open-panel')
+            $(this).siblings('.panel-collapse').slideUp(slideAnimationTime);
         } else {
-            $('#accordion .panel__heading .open-panel')
-                .removeClass('open-panel:before')
-                .addClass('open-panel');
-            $(this)
-                .find('open-panel')
-                .removeClass('open-panel')
-                .addClass('open-panel:before');
             $('#accordion .panel__heading').removeClass('open');
             $(this).addClass('open');
-            $('.panel-collapse').slideUp(500);
-            $(this)
-                .siblings('.panel-collapse')
-                .slideDown(500)
+            const $curr= $(this);
+
+            setTimeout(function () {
+                $('.panel-collapse').slideUp(slideAnimationTime);
+                $curr.siblings('.panel-collapse').slideDown(slideAnimationTime);
+
+                if (accordionSlider) {
+                    if ($.isArray(accordionSlider)) {
+                        accordionSlider.forEach(function (slider) {
+                            slider.update();
+                        });
+                    } else {
+                        accordionSlider.update();
+                    }
+                }
+            }, 100);
         }
     });
 
     //SWIPER-SLIDER
     let swiperBanner = new Swiper('.banner__slider', {
-
         slidesPerView: 1,
         loop: true,
         effect: 'fade',
@@ -139,36 +169,6 @@ $(document).ready(function () {
     }
 
     runMarquees();
-    //SLIDER-ACCORDION
-    var accordionSlider;
-
-    function slidersInit() {
-        if ($(window).width() <= 768) {
-            if (!accordionSlider) {
-                accordionSlider = new Swiper('.accordion__slider', {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                    breakpoints: {
-                        540: {
-                            slidesPerView: 1,
-                        },
-                    },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                });
-            }
-        } else {
-            if (accordionSlider) {
-                accordionSlider.destroy(true, true);
-                accordionSlider = null;
-            }
-        }
-    }
-
-    slidersInit();
-
 
     //SLIDER RELATED POST
     const sliderRelatedPost = new Swiper('.slider__related-post', {
@@ -203,7 +203,6 @@ $(document).ready(function () {
 
     $('.custom-select').niceSelect();
 
-
     //POPUP VIDEO
 
     $("#video-modal-trigger").click(function (e) {
@@ -229,4 +228,7 @@ $(document).ready(function () {
         offset: '35%'
     });
 
+    $(window).resize(function () {
+        slidersInit();
+    });
 });
