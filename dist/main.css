@@ -372,7 +372,7 @@ body.modal-open {
   color: #8b8b8b;
 }
 
-.btn_written {
+.contact-btn {
   position: fixed;
   right: 58px;
   top: 50%;
@@ -387,7 +387,7 @@ body.modal-open {
   z-index: 300;
 }
 
-.btn_written img {
+.contact-btn img {
   vertical-align: middle;
 }
 
@@ -784,7 +784,7 @@ body.modal-open {
   width: 100%;
 }
 
-.block-written {
+.contact-side-form {
   position: fixed;
   max-width: 530px;
   right: 0;
@@ -798,88 +798,90 @@ body.modal-open {
   transition: transform .5s;
 }
 
-.block-written.open {
+.contact-side-form.open {
   transform: translateX(0);
 }
 
-.block-written__title {
+.contact-side-form__title {
   font-size: 19px;
   font-weight: 400;
 }
 
-.block-written__body {
+.contact-side-form__body {
   padding-top: 95px;
 }
 
-.block-written__footer {
+.contact-side-form__footer {
   display: flex;
   justify-content: space-between;
 }
 
-.block-written .bold {
+.contact-side-form .bold {
   font-size: 35px;
 }
 
-.block-written .logo {
+.contact-side-form .logo {
   display: inline-block;
   max-width: 52px;
   margin-bottom: 40px;
 }
 
-.block-written .btn-close {
+.contact-side-form .btn-close {
   right: 45px;
   top: 36px;
 }
 
-.block-written .form {
+.contact-side-form .form {
   font-size: 17px;
   font-weight: 300;
   padding-bottom: 32px;
 }
 
-.block-written .form .wrap-link,
-.block-written .form__footer,
-.block-written .form .field-box,
-.block-written .form .textarea {
+.contact-side-form .form .wrap-link,
+.contact-side-form .form__footer,
+.contact-side-form .form .field-box,
+.contact-side-form .form .textarea {
   width: 100%;
   max-width: initial;
 }
 
-.block-written .form .textarea {
+.contact-side-form .form .textarea {
   padding-top: 10px;
   max-height: 94px;
   margin-bottom: 20px;
+  padding-left: 0;
 }
 
-.block-written .form .input {
+.contact-side-form .form .input {
   margin-bottom: 20px;
+  padding-left: 0;
 }
 
-.block-written .form__footer {
+.contact-side-form .form__footer {
   padding-top: 13px;
   flex-wrap: wrap;
 }
 
-.block-written .form .wrap-link {
+.contact-side-form .form .wrap-link {
   display: flex;
   justify-content: space-between;
   padding-top: 98px;
 }
 
-.block-written .form .link-presentation {
+.contact-side-form .form .link-presentation {
   width: 53%;
 }
 
-.block-written .form .custom-select {
+.contact-side-form .form .custom-select {
   width: 38%;
 }
 
-.block-written .form .link-presentation:before,
-.block-written .form .nice-select:before {
+.contact-side-form .form .link-presentation:before,
+.contact-side-form .form .nice-select:before {
   opacity: .4;
 }
 
-.block-written .phone-link {
+.contact-side-form .phone-link {
   font-size: 22px;
 }
 
@@ -1000,13 +1002,12 @@ body.modal-open {
 }
 
 .section-banner .scroll-down {
+  display: block;
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   left: 50%;
-  height: 70px;
-  width: 70px;
+  width: 64px;
+  height: 75px;
+  padding: 20px;
   bottom: 20px;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
@@ -1751,7 +1752,7 @@ body.modal-open {
 }
 
 @media only screen and (max-width: 1440px) {
-  .btn_written {
+  .contact-btn {
     width: 76px;
     height: 76px;
     right: 30px;
@@ -2152,6 +2153,10 @@ body.modal-open {
     display: none;
   }
 
+  .section-banner .scroll-down {
+    display: none;
+  }
+
   .section-develop .develop__card {
     width: 100%;
   }
@@ -2246,38 +2251,38 @@ body.modal-open {
     left: 0;
   }
 
-  .block-written {
+  .contact-side-form {
     max-width: 100%;
     padding: 50px 30px;
   }
 
-  .block-written .btn-close {
+  .contact-side-form .btn-close {
     right: 10px;
   }
 
-  .block-written .mob-hide {
+  .contact-side-form .mob-hide {
     display: none;
   }
 
-  .block-written .form__footer {
+  .contact-side-form .form__footer {
     padding-left: 0;
   }
 
-  .block-written .block-written__footer {
+  .contact-side-form .contact-side-form__footer {
     flex-wrap: wrap;
     text-align: center;
   }
 
-  .block-written .phone-link {
+  .contact-side-form .phone-link {
     margin-right: 20px;
   }
 
-  .block-written .phone-link:last-child {
+  .contact-side-form .phone-link:last-child {
     margin-right: 0;
   }
 
-  .block-written .form .custom-select,
-  .block-written .form .link-presentation {
+  .contact-side-form .form .custom-select,
+  .contact-side-form .form .link-presentation {
     width: 40%;
   }
 
@@ -2505,7 +2510,7 @@ body.modal-open {
 }
 
 @media only screen and (max-width: 480px) {
-  .btn_written {
+  .contact-btn {
     width: 57px;
     height: 57px;
     right: 20px;

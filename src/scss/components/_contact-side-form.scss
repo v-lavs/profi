@@ -1,4 +1,4 @@
-.block-written {
+.contact-side-form {
   position: fixed;
   max-width: 530px;
   right: 0;
@@ -61,10 +61,12 @@
       padding-top: 10px;
       max-height: 94px;
       margin-bottom: 20px;
+      padding-left: 0;
     }
 
     .input {
       margin-bottom: 20px;
+      padding-left: 0;
     }
 
     &__footer {
@@ -107,7 +109,7 @@
     .form__footer{
       padding-left: 0;
     }
-    .block-written__footer{
+    .contact-side-form__footer{
 
       flex-wrap: wrap;
       text-align: center;

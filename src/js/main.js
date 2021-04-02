@@ -30,12 +30,12 @@ $(document).ready(function () {
 
 
     /*
-     * BLOCK-WRITTEN
+     * contact-side-form
      */
 
-    const blockWritten = $('.block-written');
+    const blockWritten = $('.contact-side-form');
 
-    $('.btn_written').on('click', function (e) {
+    $('.contact-btn').on('click', function (e) {
         e.preventDefault();
         blockWritten.addClass('open');
         $('.backdrop').fadeIn();
