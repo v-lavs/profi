@@ -597,14 +597,14 @@ body.modal-open {
   height: 13px;
   top: 50%;
   right: -24px;
-  background-image: url(../assets/img/arrow-down1.png);
+  background-image: url("../assets/img/arrow-down1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   transform-origin: 50% 50%;
   transform: translateY(-50%);
   transition: transform .5s;
-  z-index: 1;
+  z-index: 11;
 }
 
 .accordion .panel {
