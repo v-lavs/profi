@@ -311,6 +311,24 @@ body.modal-open {
   padding-top: 100px;
 }
 
+.stroke-anim:before {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 45px;
+  width: 0;
+  background-color: #ffd200;
+  top: 18%;
+  left: -10%;
+  transform: rotate(32deg);
+  transform-origin: 0 100%;
+  transition: linear 2s;
+}
+
+.stroke-anim.anim_active:before {
+  width: 200vw;
+}
+
 .section__title {
   font-size: 80px;
   font-weight: 400;
@@ -1131,24 +1149,6 @@ body.modal-open {
   padding-bottom: 10.75%;
 }
 
-.section-develop:before {
-  position: absolute;
-  content: '';
-  display: block;
-  height: 45px;
-  width: 0;
-  background-color: #ffd200;
-  top: 18%;
-  left: -10%;
-  transform: rotate(32deg);
-  transform-origin: 0 100%;
-  transition: linear 5s;
-}
-
-.section-develop.anim_active:before {
-  width: 200vw;
-}
-
 .section-develop .section__title {
   margin-bottom: 48px;
 }
@@ -1165,6 +1165,7 @@ body.modal-open {
   background-color: #ffffff;
   padding: 44px 35px 64px;
   font-size: 17px;
+  transition: ease-in .5s;
 }
 
 .section-develop .develop__card:before {
