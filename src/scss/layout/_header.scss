@@ -80,6 +80,7 @@
     }
   }
   @include respond-to($lg) {
+    padding: 20px 0;
     .container{
       justify-content: space-between;
     }
@@ -94,6 +95,9 @@
     }
     .lang-switch{
       margin-left: 0;
+      &__link {
+        padding: 0 7px;
+      }
     }
     .btn-close,
     .btn-burger {
@@ -145,13 +149,8 @@
     }
   }
   @include respond-to($xs){
-    padding-top: 20px;
-    padding-bottom: 20px;
     .lang-switch{
       font-size: 13px;
-      &__link{
-        padding: 0 6px;
-      }
     }
   }
 }

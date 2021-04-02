@@ -34,8 +34,8 @@ body {
 
 .main {
   padding-top: 100px;
-  @include respond-to($xs) {
-    padding-top: 73px;
+  @include respond-to($lg) {
+    padding-top: 75px;
   }
 }
 

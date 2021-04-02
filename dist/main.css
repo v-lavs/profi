@@ -1849,6 +1849,10 @@ body.modal-open {
 }
 
 @media only screen and (max-width: 980px) {
+  .main {
+    padding-top: 75px;
+  }
+
   .section__title {
     font-size: 60px;
   }
@@ -1927,6 +1931,10 @@ body.modal-open {
     max-width: 720px;
   }
 
+  .header {
+    padding: 20px 0;
+  }
+
   .header .container {
     justify-content: space-between;
   }
@@ -1943,6 +1951,10 @@ body.modal-open {
 
   .header .lang-switch {
     margin-left: 0;
+  }
+
+  .header .lang-switch__link {
+    padding: 0 7px;
   }
 
   .header .btn-close,
@@ -2444,10 +2456,6 @@ body.modal-open {
 }
 
 @media only screen and (max-width: 480px) {
-  .main {
-    padding-top: 73px;
-  }
-
   .btn_written {
     width: 57px;
     height: 57px;
@@ -2527,17 +2535,8 @@ body.modal-open {
     max-width: 100%;
   }
 
-  .header {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
   .header .lang-switch {
     font-size: 13px;
-  }
-
-  .header .lang-switch__link {
-    padding: 0 6px;
   }
 
   .footer .social__link {
