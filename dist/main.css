@@ -1695,6 +1695,12 @@ body.modal-open {
   text-align: center;
 }
 
+@media only screen and (max-width: 1661px) {
+  .container {
+    max-width: 1240px;
+  }
+}
+
 @media only screen and (max-width: 1440px) {
   .btn_written {
     width: 76px;
@@ -1743,7 +1749,7 @@ body.modal-open {
   }
 
   .container {
-    max-width: 1125px;
+    max-width: 1120px;
   }
 
   .page-services .section-team .section__heading {
@@ -1918,8 +1924,13 @@ body.modal-open {
   }
 
   .header__logo {
+    position: absolute;
     max-width: 34px;
-    margin-left: auto;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
   }
 
   .header .lang-switch {
@@ -2004,6 +2015,10 @@ body.modal-open {
     width: 100%;
   }
 
+  .single-project .main__img {
+    min-height: 500px;
+  }
+
   .single-project .wrap-slider {
     padding: 0 35px;
   }
@@ -2076,6 +2091,10 @@ body.modal-open {
     max-width: 610px;
   }
 
+  .header .container {
+    max-width: 100%;
+  }
+
   .page-services .accordion .swiper-wrapper {
     flex-wrap: nowrap;
   }
@@ -2095,7 +2114,7 @@ body.modal-open {
   }
 
   .single-project .content__heading {
-    width: 72%;
+    width: 75%;
   }
 }
 
@@ -2364,12 +2383,17 @@ body.modal-open {
   }
 
   .single-project .main__img {
-    min-height: 293px;
+    min-height: 295px;
     margin-bottom: 30px;
   }
 
   .single-project .article__heading {
     flex-direction: column;
+  }
+
+  .single-project .article__title {
+    line-height: 1;
+    margin-bottom: 45px;
   }
 
   .single-project .block-information_desktop {
@@ -2378,6 +2402,7 @@ body.modal-open {
 
   .single-project .block-information_mob {
     display: flex;
+    font-size: 12px;
     width: 100%;
   }
 
@@ -2385,9 +2410,14 @@ body.modal-open {
     width: 50%;
   }
 
+  .single-project .content__heading {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
   .single-project .info_mob-visible {
     color: #8b8b8b;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 1.4;
     display: block;
     margin-bottom: 7px;

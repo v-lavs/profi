@@ -3,8 +3,11 @@
   max-width: 1550px;
   margin: 0 auto;
   padding: 0 25px;
+  @media  only screen and (max-width: 1661px) {
+    max-width: 1240px;
+  }
   @include respond-to($xxl) {
-    max-width: 1125px;
+    max-width: 1120px;
   }
   @include respond-to($xl) {
     max-width: 940px;

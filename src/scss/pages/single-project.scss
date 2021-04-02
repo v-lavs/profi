@@ -85,6 +85,9 @@
     }
   }
   @include respond-to($lg) {
+    .main__img {
+      min-height: 500px;
+    }
     .wrap-slider{
       padding: 0 35px;
     }
@@ -94,30 +97,39 @@
   }
   @include respond-to($md) {
     .content__heading {
-      width: 72%;
+      width: 75%;
     }
   }
   @include respond-to($sm) {
     .main__img {
-      min-height: 293px;
+      min-height: 295px;
       margin-bottom: 30px;
     }
     .article__heading {
       flex-direction: column;
+    }
+    .article__title {
+      line-height: 1;
+      margin-bottom: 45px;
     }
     .block-information_desktop {
       display: none;
     }
     .block-information_mob {
       display: flex;
+      font-size: 12px;
       width: 100%;
     }
     .block-information__item {
       width: 50%;
     }
+    .content__heading {
+      font-size: 12px;
+      line-height: 18px;
+    }
     .info_mob-visible {
       color: $dark-grey;
-      font-size: 15px;
+      font-size: 12px;
       line-height: 1.4;
       display: block;
       margin-bottom: 7px;
