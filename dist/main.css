@@ -2212,6 +2212,10 @@ body.modal-open {
 }
 
 @media only screen and (max-width: 640px) {
+  .stroke-anim:before {
+    display: none;
+  }
+
   .section__title {
     font-size: 35px;
     line-height: 1.06;
@@ -2482,6 +2486,10 @@ body.modal-open {
   .page-services .section-team .see-more {
     font-size: 17px;
     padding-right: 80px;
+  }
+
+  .page-services .section-partners {
+    padding-bottom: 0;
   }
 
   .page-services .section-about {
