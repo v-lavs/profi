@@ -54,6 +54,7 @@
     }
   }
   @include respond-to($xs){
+    padding-top: 34%;
     .partner-block {
       min-width: 50vw;
       height: 50px;

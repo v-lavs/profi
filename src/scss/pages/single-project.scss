@@ -58,11 +58,13 @@
     color: $dark;
     margin-bottom: 55px;
   }
+  .img-block{
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
   .wrap-img{
     position: relative;
     padding-top: 59.5%;
-    margin-top: 70px;
-    margin-bottom: 70px;
     img{
       position: absolute;
       left: 50%;
@@ -75,6 +77,13 @@
   }
   .dynamic-content p {
     text-align: center;
+  }
+  @include respond-to($xxl) {
+    .related-post{
+      .card-gallery__title{
+        font-size: 20px;
+      }
+    }
   }
   @include respond-to($xl) {
     .wrap-slider{
@@ -140,7 +149,12 @@
     }
     .wrap-img{
       padding-top: 72%;
-      margin-top: 0;
+         }
+    .img-block{
+      padding-top: 0;
+      padding-bottom: 40px;
+    }
+    .wrap-text{
       margin-bottom: 40px;
     }
   }

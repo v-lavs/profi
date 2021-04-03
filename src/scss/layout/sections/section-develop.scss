@@ -43,12 +43,6 @@
 
       &:hover,
       &:focus {
-        font-size: 19px;
-
-        .card__title {
-          font-size: 30px;
-        }
-
         .card__body p {
           overflow: visible;
           -webkit-line-clamp: inherit;
@@ -131,13 +125,10 @@
     }
     .develop__card {
       padding: 28px 28px 44px;
+    }
 
-      &:hover,
-      &:focus {
-        .card__title {
-          font-size: 28px;
-        }
-      }
+    .card__body{
+      min-height: 280px;
     }
     .card__title {
       font-size: 25px;
@@ -193,6 +184,9 @@
     padding-top: 0;
     &:before {
       top: 7%;
+    }
+    .section__title{
+      margin-bottom: 32px;
     }
     .develop__card:last-of-type {
       margin-bottom: 0;

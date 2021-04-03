@@ -54,6 +54,9 @@
       .card-gallery {
         width: 100%;
         margin-bottom: 19.5%;
+        &__wrap-thumb{
+          margin-bottom: 8px;
+        }
       }
     }
   }
