@@ -46,6 +46,7 @@
         .card__body p {
           overflow: visible;
           -webkit-line-clamp: inherit;
+          height: auto;
         }
       }
     }
@@ -127,9 +128,6 @@
       padding: 28px 28px 44px;
     }
 
-    .card__body{
-      min-height: 280px;
-    }
     .card__title {
       font-size: 25px;
     }

@@ -318,7 +318,7 @@ body.modal-open {
   height: 45px;
   width: 0;
   background-color: #ffd200;
-  top: 18%;
+  top: 210px;
   left: -10%;
   transform: rotate(32deg);
   transform-origin: 0 100%;
@@ -979,7 +979,7 @@ body.modal-open {
 .section-banner .banner__content {
   max-width: 400px;
   opacity: 0;
-  transform: translateY(5%);
+  transform: translateY(15px);
   transition: .6s ease-out;
   transition-delay: .6s;
 }
@@ -1205,6 +1205,7 @@ body.modal-open {
 .section-develop .develop__card:focus .card__body p {
   overflow: visible;
   -webkit-line-clamp: inherit;
+  height: auto;
 }
 
 .section-develop .card__heading {
@@ -1395,7 +1396,7 @@ body.modal-open {
 }
 
 .header.header_active {
-  padding: 20px 0;
+  transform: translateY(-100%);
 }
 
 .header .container {
@@ -1779,10 +1780,6 @@ body.modal-open {
 
   .section-develop .develop__card {
     padding: 28px 28px 44px;
-  }
-
-  .section-develop .card__body {
-    min-height: 280px;
   }
 
   .section-develop .card__title {
