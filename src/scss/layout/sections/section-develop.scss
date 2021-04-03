@@ -180,6 +180,7 @@
   }
   @include respond-to($xs) {
     padding-top: 0;
+    padding-bottom: 43.75%;
     &:before {
       top: 7%;
     }

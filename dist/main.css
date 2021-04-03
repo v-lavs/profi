@@ -567,6 +567,7 @@ body.modal-open {
   padding: 20px 10px 10px 0;
   max-height: 143px;
   margin-bottom: 48px;
+  overflow: hidden;
 }
 
 .form .field-box {
@@ -2411,8 +2412,16 @@ body.modal-open {
     min-height: auto;
   }
 
+  .section-about {
+    padding-bottom: 130px;
+  }
+
   .section-about .about-block {
     padding: 28px;
+  }
+
+  .section-about .section__title {
+    padding-left: 25px;
   }
 
   .section-contacts {
@@ -2422,6 +2431,7 @@ body.modal-open {
   .section-contacts .section__slogan {
     font-size: 17px;
     margin-bottom: 50px;
+    padding-left: 25px;
   }
 
   .section-contacts .bold {
@@ -2472,6 +2482,10 @@ body.modal-open {
   .page-services .section-team .see-more {
     font-size: 17px;
     padding-right: 80px;
+  }
+
+  .page-services .section-about {
+    padding-bottom: 130px;
   }
 
   .single-project .main__img {
@@ -2561,6 +2575,7 @@ body.modal-open {
 
   .section-develop {
     padding-top: 0;
+    padding-bottom: 43.75%;
   }
 
   .section-develop:before {

@@ -109,8 +109,12 @@
     }
   }
   @include respond-to($sm){
+    padding-bottom: 130px;
     .about-block{
       padding: 28px;
+    }
+    .section__title{
+      padding-left: 25px;
     }
   }
   @include respond-to($xs){
