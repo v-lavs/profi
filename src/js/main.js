@@ -252,10 +252,7 @@ $(document).ready(function () {
         $("#video-popup-wrapper").removeClass("active");
         $("body").removeClass("modal-open");
         const video = $('#video');
-
-        video.attr('src', '');
-        const src = video.attr('src');
-        video.attr('src', src);
+        video.get(0).pause();
     });
 
 
