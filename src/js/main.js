@@ -231,7 +231,6 @@ $(document).ready(function () {
                 slidesPerView: 3,
                 spaceBetween: 87,
             },
-
         }
     });
 

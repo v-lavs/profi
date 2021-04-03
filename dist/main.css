@@ -2608,6 +2608,11 @@ body.modal-open {
 
   .section-about .section__title {
     margin-bottom: 44px;
+    padding-left: 20px;
+  }
+
+  .section-contacts .section__slogan {
+    padding: 0 20px;
   }
 
   .section-contacts .bold {
