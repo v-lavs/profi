@@ -31,8 +31,8 @@
   }
 
   .section-team {
-    padding-bottom: 9%;
-
+    padding-bottom: 11.5%;
+    padding-top: 100px;
     .section__title {
       font-size: 58px;
       font-weight: 700;
@@ -66,15 +66,25 @@
     }
 
     .wrap-thumb {
+      position: relative;
       width: 32%;
       float: right;
       margin-left: 20px;
+    }
+    .signature{
+      position: absolute;
+      bottom: 25px;
+      left: 32px;
+      font-weight: 300;
+      font-size: 28px;
+      color: $white;
+      z-index: 1;
     }
   }
 
   .section-partners {
     background-color: $white;
-    padding-bottom: 22%;
+    padding-top: 8.5%;
 
     .section__title {
       margin-bottom: 80px;
@@ -83,21 +93,17 @@
 
   .section-about {
     position: relative;
+    padding-top: 27%;
+    padding-bottom: 22%;
     &:before {
-      position: absolute;
-      content: '';
-      display: block;
-      height: 45px;
-      width: 200vw;
-      background-color: $yellow;
-      top: 50%;
-      left: -35%;
-      transform: translateY(-50%) rotate(28deg);
+      top: 0;
+      left: -112px;
     }
   }
 
   @include respond-to($xxl) {
     .section-team {
+      padding-top: 50px;
       .section__heading {
         padding-top: 0;
       }
@@ -159,6 +165,7 @@
   }
   @include respond-to($sm) {
     .section-team {
+      padding-top: 30px;
       .section__heading,
       .wrap-thumb {
         float: none;

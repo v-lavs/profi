@@ -627,8 +627,8 @@ body.modal-open {
 
 .accordion .panel {
   position: relative;
-  padding-top: 85px;
-  padding-bottom: 125px;
+  padding-top: 95px;
+  padding-bottom: 80px;
   width: 100%;
 }
 
@@ -651,7 +651,7 @@ body.modal-open {
 
 .accordion .panel__title {
   position: relative;
-  margin: 0 0 60px 0;
+  margin: 0 0 50px 0;
   color: #000000;
   font-size: 45px;
   font-weight: 400;
@@ -674,6 +674,10 @@ body.modal-open {
   font-size: 19px;
   line-height: 1.32;
   width: 80%;
+}
+
+.accordion .panel:first-child {
+  padding-top: 75px;
 }
 
 .accordion .panel:last-child:after {
@@ -963,7 +967,7 @@ body.modal-open {
 }
 
 .section-banner .banner__slide {
-  min-height: 740px;
+  min-height: 744px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1034,7 +1038,7 @@ body.modal-open {
 }
 
 .section-gallery .block-logo {
-  margin-bottom: 47px;
+  margin-bottom: 42px;
 }
 
 .section-gallery .logo-link {
@@ -1068,8 +1072,8 @@ body.modal-open {
 }
 
 .section-gallery .card-gallery__wrap-thumb {
-  padding-top: 69%;
-  margin-bottom: 45px;
+  padding-top: 70%;
+  margin-bottom: 38px;
 }
 
 .section-gallery .card-gallery__wrap-thumb_big {
@@ -1085,7 +1089,7 @@ body.modal-open {
 }
 
 .section-gallery .card-gallery__title {
-  margin-bottom: 8px;
+  margin-bottom: 0;
   text-transform: uppercase;
 }
 
@@ -1099,7 +1103,7 @@ body.modal-open {
 
 .section-partners {
   padding-top: 65px;
-  padding-bottom: 90px;
+  padding-bottom: 84px;
   background-color: #f9f9f9;
 }
 
@@ -1151,7 +1155,7 @@ body.modal-open {
 }
 
 .section-develop .section__title {
-  margin-bottom: 48px;
+  margin-bottom: 50px;
 }
 
 .section-develop .develop__list {
@@ -1164,7 +1168,7 @@ body.modal-open {
   width: 25%;
   margin: 0 10px;
   background-color: #ffffff;
-  padding: 44px 35px 64px;
+  padding: 50px 35px 64px;
   font-size: 17px;
   transition: ease-in .5s;
 }
@@ -1547,7 +1551,7 @@ body.modal-open {
 }
 
 .page-projects .section-gallery {
-  padding-bottom: 28px;
+  padding-bottom: 6%;
   background-color: #ffffff;
 }
 
@@ -1558,12 +1562,12 @@ body.modal-open {
 .page-projects .section-gallery .card-gallery {
   padding: 0 23px;
   width: 33%;
-  margin-bottom: 11.5%;
+  margin-bottom: 10.5%;
 }
 
 .page-projects .section-gallery .card-gallery__wrap-thumb {
   padding-top: 79%;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
 
 .page-projects .section-gallery .block-logo {
@@ -1599,7 +1603,8 @@ body.modal-open {
 }
 
 .page-services .section-team {
-  padding-bottom: 9%;
+  padding-bottom: 11.5%;
+  padding-top: 100px;
 }
 
 .page-services .section-team .section__title {
@@ -1635,14 +1640,25 @@ body.modal-open {
 }
 
 .page-services .section-team .wrap-thumb {
+  position: relative;
   width: 32%;
   float: right;
   margin-left: 20px;
 }
 
+.page-services .section-team .signature {
+  position: absolute;
+  bottom: 25px;
+  left: 32px;
+  font-weight: 300;
+  font-size: 28px;
+  color: #ffffff;
+  z-index: 1;
+}
+
 .page-services .section-partners {
   background-color: #ffffff;
-  padding-bottom: 22%;
+  padding-top: 8.5%;
 }
 
 .page-services .section-partners .section__title {
@@ -1651,18 +1667,13 @@ body.modal-open {
 
 .page-services .section-about {
   position: relative;
+  padding-top: 27%;
+  padding-bottom: 22%;
 }
 
 .page-services .section-about:before {
-  position: absolute;
-  content: '';
-  display: block;
-  height: 45px;
-  width: 200vw;
-  background-color: #ffd200;
-  top: 50%;
-  left: -35%;
-  transform: translateY(-50%) rotate(28deg);
+  top: 0;
+  left: -112px;
 }
 
 .single-project .main__img {
@@ -1808,6 +1819,10 @@ body.modal-open {
 
   .header .menu__item {
     margin-left: 40px;
+  }
+
+  .page-services .section-team {
+    padding-top: 50px;
   }
 
   .page-services .section-team .section__heading {
@@ -2422,6 +2437,10 @@ body.modal-open {
   .container {
     max-width: 460px;
     padding: 0 25px;
+  }
+
+  .page-services .section-team {
+    padding-top: 30px;
   }
 
   .page-services .section-team .section__heading,
