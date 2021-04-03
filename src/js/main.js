@@ -69,15 +69,29 @@ $(document).ready(function () {
     });
 
     //SMOOTH SCROLL TO ANGKOR
+    function smoothScrollToAnchor(selector) {
+        $(selector).on('click', function (event) {
+            let anchor = $.attr(this, 'href')
 
-    $(".js-scroll-to, a[href^=\"#\"]").click(function (e) {
-        const target = $(this.hash);
-        if (target) {
-            $('html, body').animate({
-                scrollTop: target.offset().top - $('.header').outerHeight()
-            }, 1000);
-        }
-    });
+            if (anchor.match(/^#/) && anchor !== '#') {
+                event.preventDefault()
+                let offsetSize = $("header").innerHeight();
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top - offsetSize
+                }, 1500)
+            }
+        })
+    }
+
+    // smoothScrollToAnchor('.menu__link')
+    // $(".js-scroll-to, a[href^=\"#\"]").click(function (e) {
+    //     const target = $(this.hash);
+    //     if (target) {
+    //         $('html, body').animate({
+    //             scrollTop: target.offset().top - $('.header').outerHeight()
+    //         }, 1000);
+    //     }
+    // });
 
 
     // SLIDER-ACCORDION
@@ -238,6 +252,7 @@ $(document).ready(function () {
 
     $("#video-modal-trigger").click(function (e) {
         e.preventDefault();
+        console.log(1111)
         $("#video-popup-wrapper").addClass("active");
         $("body").addClass("modal-open");
     });
