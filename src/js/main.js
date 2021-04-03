@@ -16,7 +16,6 @@ $(document).ready(function () {
 
     // MOBILE MENU
 
-
     const nav = $('.header__nav');
 
     $('.btn-burger').on('click', function (e) {
@@ -34,7 +33,6 @@ $(document).ready(function () {
 
 
     // CONTACT-SIDE-FORM
-
 
     const blockWritten = $('.contact-side-form');
 
@@ -82,17 +80,6 @@ $(document).ready(function () {
             }
         })
     }
-
-    // smoothScrollToAnchor('.menu__link')
-    // $(".js-scroll-to, a[href^=\"#\"]").click(function (e) {
-    //     const target = $(this.hash);
-    //     if (target) {
-    //         $('html, body').animate({
-    //             scrollTop: target.offset().top - $('.header').outerHeight()
-    //         }, 1000);
-    //     }
-    // });
-
 
     // SLIDER-ACCORDION
 
@@ -145,15 +132,17 @@ $(document).ready(function () {
                 $('.panel-collapse').slideUp(slideAnimationTime);
                 $curr.siblings('.panel-collapse').slideDown(slideAnimationTime);
 
-                if (accordionSlider) {
-                    if ($.isArray(accordionSlider)) {
-                        accordionSlider.forEach(function (slider) {
-                            slider.update();
-                        });
-                    } else {
-                        accordionSlider.update();
+                setTimeout(function () {
+                    if (accordionSlider) {
+                        if ($.isArray(accordionSlider)) {
+                            accordionSlider.forEach(function (slider) {
+                                slider.update();
+                            });
+                        } else {
+                            accordionSlider.update();
+                        }
                     }
-                }
+                }, slideAnimationTime);
             }, 100);
         }
     });
@@ -252,7 +241,6 @@ $(document).ready(function () {
 
     $("#video-modal-trigger").click(function (e) {
         e.preventDefault();
-        console.log(1111)
         $("#video-popup-wrapper").addClass("active");
         $("body").addClass("modal-open");
     });
