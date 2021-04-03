@@ -221,9 +221,13 @@ $(document).ready(function () {
             },
             1200: {
                 slidesPerView: 3,
-                spaceBetween: 40,
+                spaceBetween: 30,
             },
             1440: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+            1900: {
                 slidesPerView: 3,
                 spaceBetween: 87,
             },
